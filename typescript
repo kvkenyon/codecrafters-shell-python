@@ -1,0 +1,1185 @@
+Script started on Thu Feb 13 13:56:27 2025
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [K[?1h=[?2004h[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo test
+$ echo asdfasdklfj
+echo asdfasdklfj: command not found
+$ ^[[A^[[D^[[B            ç ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m111[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m82[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo test   asdf
+test asdf
+$ echo 'test      asdf'
+test      asdf
+$ ^[[A^[[D        exit
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[17Decho test   script[18Dcodecrafters test [17Dclear            [12Dcodecrafters test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[32m⚡ This is a turbo test run. https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#NI6] [0m[94mRunning tests for Stage #NI6 (Quoting - Single quotes)[0m
+[33m[tester::#NI6] [setup] [0m[94mexport PATH=/tmp/apple/raspberry/strawberry:$PATH[0m
+[33m[tester::#NI6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "orange apple." > "/tmp/baz/f   72"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "orange raspberry." > "/tmp/baz/f   60"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "orange apple." > "/tmp/baz/f   89"[0m
+[33m[your-program] [0m$ echo 'script example'
+[33m[your-program] [0mscript example
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo example     hello
+[33m[your-program] [0mexample hello
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'test     world' 'hello''script'
+[33m[your-program] [0mtest     world hello script
+[33m[tester::#NI6] [0m[91mOutput does not match expected value.[0m
+[33m[tester::#NI6] [0m[91m[32mExpected:[0m "test     world helloscript"[0m
+[33m[tester::#NI6] [0m[91m[31mReceived:[0m "test     world hello script"[0m
+[33m[your-program] [0m$ 
+[33m[tester::#NI6] [0m[91mAssertion failed.[0m
+[33m[tester::#NI6] [0m[91mTest failed[0m
+
+View our article on debugging test failures: https://codecrafters.io/debug
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcodecrafters test[17D./your_program.sh[17Decho test   script[18D./your_program.sh [?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ ls -lah
+Command(name='ls', args=[' ', '-lah'])
+ls:  : No such file or directory
+ls: -lah: No such file or directory
+$ ^[[A^[[A        echo 'test     world' 'hello''script'
+Command(name='echo', args=[' ', 'test     world', ' ', 'hello', 'script'])
+  test     world   hello script
+$ exit
+Command(name='exit', args=[])
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[17Dcodecrafters test[17D./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ ^[[A    ls -a lah
+Command(name='ls', args=['-lah'], parsed=['ls', ' ', '-lah'])
+total 72
+drwxr-xr-x  13 kevin  staff   416B Feb 13 13:56 .
+drwxr-xr-x@ 28 kevin  staff   896B Feb 12 16:10 ..
+drwxr-xr-x   4 kevin  staff   128B Feb 12 16:10 .codecrafters
+drwxr-xr-x  14 kevin  staff   448B Feb 13 12:07 .git
+-rw-r--r--   1 kevin  staff    12B Feb 12 16:10 .gitattributes
+-rw-r--r--   1 kevin  staff   2.6K Feb 12 16:10 .gitignore
+-rw-r--r--   1 kevin  staff   269B Feb 12 16:10 Pipfile
+-rw-r--r--   1 kevin  staff   451B Feb 12 16:10 Pipfile.lock
+-rw-r--r--   1 kevin  staff   1.3K Feb 12 16:10 README.md
+drwxr-xr-x   4 kevin  staff   128B Feb 13 13:22 app
+-rw-r--r--   1 kevin  staff   294B Feb 13 11:51 codecrafters.yml
+-rw-r--r--   1 kevin  staff   5.2K Feb 13 14:06 typescript
+-rwxr-xr-x   1 kevin  staff   449B Feb 12 16:10 your_program.sh
+$ ^[[A^[[B        echo 'test     world' 'hello''script'
+Command(name='echo', args=['test     world', 'hello', 'script'], parsed=['echo', ' ', 'test     world', ' ', 'hello', 'script'])
+test     world hello script
+$ ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m121[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m92[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo asdf
+Command(name='echo', args=['asdf'], parsed=['echo', ' ', 'asdf'])
+asdf
+$ ^[[A    echo 'test     world' 'hello''script'
+Command(name='echo', args=['test     world', 'hello', 'script'], parsed=['echo', ' ', 'test     world', ' ', 'hello', 'script'])
+test     world helloscript
+$ exit
+Command(name='exit', args=[], parsed=['exit'])
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[17Dcodecrafters test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[33m⏳ Turbo test runners busy. You are in queue.[0m
+[33m[0m
+[33mUpgrade to skip the wait: https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#NI6] [0m[94mRunning tests for Stage #NI6 (Quoting - Single quotes)[0m
+[33m[tester::#NI6] [setup] [0m[94mexport PATH=/tmp/mango/pear/mango:$PATH[0m
+[33m[tester::#NI6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "pineapple banana." > "/tmp/baz/f   15"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "strawberry apple." > "/tmp/baz/f   76"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "raspberry strawberry." > "/tmp/baz/f   98"[0m
+[33m[your-program] [0m$ echo 'world shell'
+[33m[your-program] [0mworld shell
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo shell     example
+[33m[your-program] [0mshell example
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'test     script' 'example''world'
+[33m[your-program] [0mtest     script exampleworld
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat '/tmp/baz/f   15' '/tmp/baz/f   76' '/tmp/baz/f   98'
+[33m[your-program] [0mcat: tmp: No such file or directory
+[33m[tester::#NI6] [0m[91mOutput does not match expected value.[0m
+[33m[tester::#NI6] [0m[91m[32mExpected:[0m "pineapple banana.strawberry apple.raspberry strawberry."[0m
+[33m[tester::#NI6] [0m[91m[31mReceived:[0m "cat: tmp: No such file or directory"[0m
+[33m[your-program] [0mcat: baz: No such file or directory
+[33m[your-program] [0mcat: f: No such file or directory
+[33m[your-program] [0mcat:  : No such file or directory
+[33m[your-program] [0mcat: tmp: No such file or directory
+[33m[your-program] [0mcat: baz: No such file or directory
+[33m[your-program] [0mcat: f: No such file or directory
+[33m[your-program] [0mcat:  : No such file or directory
+[33m[your-program] [0mcat: tmp: No such file or directory
+[33m[your-program] [0mcat: baz: No such file or directory
+[33m[your-program] [0mcat: f: No such file or directory
+[33m[your-program] [0m$ 
+[33m[tester::#NI6] [0m[91mAssertion failed.[0m
+[33m[tester::#NI6] [0m[91mTest failed[0m
+
+View our article on debugging test failures: https://codecrafters.io/debug
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcodecrafters test[17D./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ cat '/tmp/baz/f   15' '/tmp/baz/f   76' '/tmp/baz/f   98'
+cat: tmp: No such file or directory
+cat: baz: No such file or directory
+cat: f: No such file or directory
+cat:  : No such file or directory
+cat: tmp: No such file or directory
+cat: baz: No such file or directory
+cat: f: No such file or directory
+cat:  : No such file or directory
+cat: tmp: No such file or directory
+cat: baz: No such file or directory
+cat: f: No such file or directory
+$ exit
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ cat '/tmp/baz/f   15' '/tmp/baz/f   76' '/tmp/baz/f   98'
+Command(name='cat', args=['tmp', 'baz', 'f', ' ', 'tmp', 'baz', 'f', ' ', 'tmp', 'baz', 'f'], parsed=['cat', ' ', 'tmp', 'baz', 'f', ' ', ' ', 'tmp', 'baz', 'f', ' ', ' ', 'tmp', 'baz', 'f', ' '])
+cat: tmp: No such file or directory
+cat: baz: No such file or directory
+cat: f: No such file or directory
+cat:  : No such file or directory
+cat: tmp: No such file or directory
+cat: baz: No such file or directory
+cat: f: No such file or directory
+cat:  : No such file or directory
+cat: tmp: No such file or directory
+cat: baz: No such file or directory
+cat: f: No such file or directory
+$ ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m121[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m92[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ cat '/tmp/baz/f   15' '/tmp/baz/f   76' '/tmp/baz/f   98'
+Command(name='cat', args=['/tmp/baz/f   15', '/tmp/baz/f   76', '/tmp/baz/f   98'], parsed=['cat', ' ', '/tmp/baz/f   15', ' ', '/tmp/baz/f   76', ' ', '/tmp/baz/f   98'])
+cat: /tmp/baz/f   15: No such file or directory
+cat: /tmp/baz/f   76: No such file or directory
+cat: /tmp/baz/f   98: No such file or directory
+$ ^[[A^[[A^[[A            exit
+Command(name='exit', args=[], parsed=['exit'])
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[17Dcodecrafters test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[32m⚡ This is a turbo test run. https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#NI6] [0m[94mRunning tests for Stage #NI6 (Quoting - Single quotes)[0m
+[33m[tester::#NI6] [setup] [0m[94mexport PATH=/tmp/pear/raspberry/apple:$PATH[0m
+[33m[tester::#NI6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "grape raspberry." > "/tmp/bar/f   96"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "pineapple pear." > "/tmp/bar/f   90"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "pear mango." > "/tmp/bar/f   52"[0m
+[33m[your-program] [0m$ echo 'hello world'
+[33m[your-program] [0mCommand(name='echo', args=['hello world'], parsed=['echo', ' ', 'hello world'])
+[33m[tester::#NI6] [0m[91mOutput does not match expected value.[0m
+[33m[tester::#NI6] [0m[91m[32mExpected:[0m "hello world"[0m
+[33m[tester::#NI6] [0m[91m[31mReceived:[0m "Command(name='echo', args=['hello world'], parsed=['echo', ' ', 'hello world'])"[0m
+[33m[your-program] [0mhello world
+[33m[your-program] [0m$ 
+[33m[tester::#NI6] [0m[91mAssertion failed.[0m
+[33m[tester::#NI6] [0m[91mTest failed[0m
+
+View our article on debugging test failures: https://codecrafters.io/debug
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcodecrafters test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[32m⚡ This is a turbo test run. https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#NI6] [0m[94mRunning tests for Stage #NI6 (Quoting - Single quotes)[0m
+[33m[tester::#NI6] [setup] [0m[94mexport PATH=/tmp/banana/apple/mango:$PATH[0m
+[33m[tester::#NI6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "apple orange." > "/tmp/quz/f   7"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "orange raspberry." > "/tmp/quz/f   10"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "apple strawberry." > "/tmp/quz/f   20"[0m
+[33m[your-program] [0m$ echo 'script world'
+[33m[your-program] [0mscript world
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo world     hello
+[33m[your-program] [0mworld hello
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'example     shell' 'hello''script'
+[33m[your-program] [0mexample     shell helloscript
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat '/tmp/quz/f   7' '/tmp/quz/f   10' '/tmp/quz/f   20'
+[33m[your-program] [0mapple orange.orange raspberry.apple strawberry.
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#NI6] [0m[92mTest passed.[0m
+
+[33m[tester::#GP4] [0m[94mRunning tests for Stage #GP4 (Navigation - The cd builtin: Home directory)[0m
+[33m[tester::#GP4] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/banana/banana/pineapple
+[33m[your-program] [0mcd: tmp: No such file or directory
+[33m[tester::#GP4] [0m[91mExpected prompt ("$ ") but received "cd: tmp: No such file or directory"[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GP4] [0m[91mAssertion failed.[0m
+[33m[tester::#GP4] [0m[91mTest failed[0m
+
+View our article on debugging test failures: https://codecrafters.io/debug
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcodecrafters test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[32m⚡ This is a turbo test run. https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#NI6] [0m[94mRunning tests for Stage #NI6 (Quoting - Single quotes)[0m
+[33m[tester::#NI6] [setup] [0m[94mexport PATH=/tmp/mango/pineapple/blueberry:$PATH[0m
+[33m[tester::#NI6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "pear blueberry." > "/tmp/bar/f   58"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "pear raspberry." > "/tmp/bar/f   54"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "orange pineapple." > "/tmp/bar/f   43"[0m
+[33m[your-program] [0m$ echo 'test shell'
+[33m[your-program] [0mtest shell
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo shell     example
+[33m[your-program] [0mshell example
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'script     world' 'example''test'
+[33m[your-program] [0mscript     world exampletest
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat '/tmp/bar/f   58' '/tmp/bar/f   54' '/tmp/bar/f   43'
+[33m[your-program] [0mpear blueberry.pear raspberry.orange pineapple.
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#NI6] [0m[92mTest passed.[0m
+
+[33m[tester::#GP4] [0m[94mRunning tests for Stage #GP4 (Navigation - The cd builtin: Home directory)[0m
+[33m[tester::#GP4] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/grape/pear/pineapple
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/grape/pear/pineapple
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ~
+[33m[your-program] [0mTraceback (most recent call last):
+[33m[tester::#GP4] [0m[91mExpected prompt ("$ ") but received "Traceback (most recent call last):"[0m
+[33m[your-program] [0m  File "<frozen runpy>", line 198, in _run_module_as_main
+[33m[your-program] [0m  File "<frozen runpy>", line 88, in _run_code
+[33m[your-program] [0m  File "/app/app/main.py", line 121, in <module>
+[33m[your-program] [0m    main()
+[33m[your-program] [0m  File "/app/app/main.py", line 105, in main
+[33m[your-program] [0m    cd(args[0])
+[33m[your-program] [0m       ~~~~^^^
+[33m[your-program] [0mIndexError: list index out of range
+[33m[tester::#GP4] [0m[91mAssertion failed.[0m
+[33m[tester::#GP4] [0m[91mTest failed[0m
+
+View our article on debugging test failures: https://codecrafters.io/debug
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcodecrafters test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[32m⚡ This is a turbo test run. https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#NI6] [0m[94mRunning tests for Stage #NI6 (Quoting - Single quotes)[0m
+[33m[tester::#NI6] [setup] [0m[94mexport PATH=/tmp/apple/mango/strawberry:$PATH[0m
+[33m[tester::#NI6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "blueberry pear." > "/tmp/quz/f   1"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "apple raspberry." > "/tmp/quz/f   43"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "orange pineapple." > "/tmp/quz/f   49"[0m
+[33m[your-program] [0m$ echo 'shell test'
+[33m[your-program] [0mshell test
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo test     world
+[33m[your-program] [0mtest world
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'script     hello' 'world''shell'
+[33m[your-program] [0mscript     hello worldshell
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat '/tmp/quz/f   1' '/tmp/quz/f   43' '/tmp/quz/f   49'
+[33m[your-program] [0mblueberry pear.apple raspberry.orange pineapple.
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#NI6] [0m[92mTest passed.[0m
+
+[33m[tester::#GP4] [0m[94mRunning tests for Stage #GP4 (Navigation - The cd builtin: Home directory)[0m
+[33m[tester::#GP4] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/grape/orange/blueberry
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/grape/orange/blueberry
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ~
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/pineapple/apple/strawberry
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GP4] [0m[92mTest passed.[0m
+
+[33m[tester::#GQ9] [0m[94mRunning tests for Stage #GQ9 (Navigation - The cd builtin: Relative paths)[0m
+[33m[tester::#GQ9] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/grape
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/grape
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ./raspberry/blueberry
+[33m[your-program] [0mcd: /raspberry/blueberry: No such file or directory
+[33m[tester::#GQ9] [0m[91mExpected prompt ("$ ") but received "cd: /raspberry/blueberry: No such file or directory"[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GQ9] [0m[91mAssertion failed.[0m
+[33m[tester::#GQ9] [0m[91mTest failed[0m
+
+View our article on debugging test failures: https://codecrafters.io/debug
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcodecrafters test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[32m⚡ This is a turbo test run. https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#NI6] [0m[94mRunning tests for Stage #NI6 (Quoting - Single quotes)[0m
+[33m[tester::#NI6] [setup] [0m[94mexport PATH=/tmp/apple/strawberry/blueberry:$PATH[0m
+[33m[tester::#NI6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "raspberry banana." > "/tmp/bar/f   6"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "mango orange." > "/tmp/bar/f   11"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "orange banana." > "/tmp/bar/f   20"[0m
+[33m[your-program] [0m$ echo 'world script'
+[33m[your-program] [0mworld script
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo script     test
+[33m[your-program] [0mscript test
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'example     hello' 'test''world'
+[33m[your-program] [0mexample     hello testworld
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat '/tmp/bar/f   6' '/tmp/bar/f   11' '/tmp/bar/f   20'
+[33m[your-program] [0mraspberry banana.mango orange.orange banana.
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#NI6] [0m[92mTest passed.[0m
+
+[33m[tester::#GP4] [0m[94mRunning tests for Stage #GP4 (Navigation - The cd builtin: Home directory)[0m
+[33m[tester::#GP4] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/strawberry/pear/banana
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/strawberry/pear/banana
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ~
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/grape/blueberry/pear
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GP4] [0m[92mTest passed.[0m
+
+[33m[tester::#GQ9] [0m[94mRunning tests for Stage #GQ9 (Navigation - The cd builtin: Relative paths)[0m
+[33m[tester::#GQ9] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/strawberry
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/strawberry
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ./strawberry/grape
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/strawberry/strawberry/grape
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ../../../
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GQ9] [0m[92mTest passed.[0m
+
+[33m[tester::#RA6] [0m[94mRunning tests for Stage #RA6 (Navigation - The cd builtin: Absolute paths)[0m
+[33m[tester::#RA6] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/pear/orange/raspberry
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/pear/orange/raspberry
+[33m[tester::#RA6] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd /non-existing-directory
+[33m[your-program] [0mcd: /non: No such file or directory
+[33m[tester::#RA6] [0m[91mOutput does not match expected value.[0m
+[33m[tester::#RA6] [0m[91m[32mExpected:[0m "cd: /non-existing-directory: No such file or directory"[0m
+[33m[tester::#RA6] [0m[91m[31mReceived:[0m "cd: /non: No such file or directory"[0m
+[33m[your-program] [0m$ 
+[33m[tester::#RA6] [0m[91mAssertion failed.[0m
+[33m[tester::#RA6] [0m[91mTest failed[0m
+
+View our article on debugging test failures: https://codecrafters.io/debug
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcodecrafters test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[32m⚡ This is a turbo test run. https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#NI6] [0m[94mRunning tests for Stage #NI6 (Quoting - Single quotes)[0m
+[33m[tester::#NI6] [setup] [0m[94mexport PATH=/tmp/pineapple/grape/apple:$PATH[0m
+[33m[tester::#NI6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "mango pear." > "/tmp/foo/f   24"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "blueberry strawberry." > "/tmp/foo/f   43"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "apple banana." > "/tmp/foo/f   81"[0m
+[33m[your-program] [0m$ echo 'script test'
+[33m[your-program] [0mscript test
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo test     hello
+[33m[your-program] [0mtest hello
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'world     example' 'hello''script'
+[33m[your-program] [0mworld     example helloscript
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat '/tmp/foo/f   24' '/tmp/foo/f   43' '/tmp/foo/f   81'
+[33m[your-program] [0mmango pear.blueberry strawberry.apple banana.
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#NI6] [0m[92mTest passed.[0m
+
+[33m[tester::#GP4] [0m[94mRunning tests for Stage #GP4 (Navigation - The cd builtin: Home directory)[0m
+[33m[tester::#GP4] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/apple/raspberry/grape
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/apple/raspberry/grape
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ~
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/orange/strawberry/apple
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GP4] [0m[92mTest passed.[0m
+
+[33m[tester::#GQ9] [0m[94mRunning tests for Stage #GQ9 (Navigation - The cd builtin: Relative paths)[0m
+[33m[tester::#GQ9] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/pineapple
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/pineapple
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ./orange/blueberry
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/pineapple/orange/blueberry
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ../../../
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GQ9] [0m[92mTest passed.[0m
+
+[33m[tester::#RA6] [0m[94mRunning tests for Stage #RA6 (Navigation - The cd builtin: Absolute paths)[0m
+[33m[tester::#RA6] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/grape/orange/strawberry
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/grape/orange/strawberry
+[33m[tester::#RA6] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd /non-existing-directory
+[33m[your-program] [0mcd: /non-existing-directory: No such file or directory
+[33m[tester::#RA6] [0m[92m✓ Received error message[0m
+[33m[your-program] [0m$ 
+[33m[tester::#RA6] [0m[92mTest passed.[0m
+
+[33m[tester::#EI0] [0m[94mRunning tests for Stage #EI0 (Navigation - The pwd builtin)[0m
+[33m[tester::#EI0] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ type pwd
+[33m[your-program] [0mpwd is a shell builtin
+[33m[tester::#EI0] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/app
+[33m[tester::#EI0] [0m[92m✓ Received current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#EI0] [0m[92mTest passed.[0m
+
+[33m[tester::#IP1] [0m[94mRunning tests for Stage #IP1 (Run a program)[0m
+[33m[tester::#IP1] [setup] [0m[94mexport PATH=/tmp/baz:$PATH[0m
+[33m[tester::#IP1] [setup] [0m[94mAvailable executables:[0m
+[33m[tester::#IP1] [setup] [0m[94m- custom_exe_6589[0m
+[33m[tester::#IP1] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ custom_exe_6589 Alice
+[33m[your-program] [0mcustom_exe_6589 Alice: command not found
+[33m[tester::#IP1] [0m[91mOutput does not match expected value.[0m
+[33m[tester::#IP1] [0m[91m[32mExpected:[0m "Program was passed 2 args (including program name)."[0m
+[33m[tester::#IP1] [0m[91m[31mReceived:[0m "custom_exe_6589 Alice: command not found"[0m
+[33m[your-program] [0m$ 
+[33m[tester::#IP1] [0m[91mAssertion failed.[0m
+[33m[tester::#IP1] [0m[91mTest failed[0m
+
+View our article on debugging test failures: https://codecrafters.io/debug
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h    uv venvls     [?1l>[?2004l
+]2;ls -G]1;lsPipfile          Pipfile.lock     README.md        [1m[36mapp[39;49m[0m              codecrafters.yml typescript       [31myour_program.sh[39;49m[0m
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h    lscodecrafters test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[32m⚡ This is a turbo test run. https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#NI6] [0m[94mRunning tests for Stage #NI6 (Quoting - Single quotes)[0m
+[33m[tester::#NI6] [setup] [0m[94mexport PATH=/tmp/strawberry/raspberry/mango:$PATH[0m
+[33m[tester::#NI6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "grape strawberry." > "/tmp/qux/f   35"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "pineapple grape." > "/tmp/qux/f   68"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "blueberry mango." > "/tmp/qux/f   53"[0m
+[33m[your-program] [0m$ echo 'shell example'
+[33m[your-program] [0mshell example
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo example     test
+[33m[your-program] [0mexample test
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'hello     script' 'test''shell'
+[33m[your-program] [0mhello     script testshell
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat '/tmp/qux/f   35' '/tmp/qux/f   68' '/tmp/qux/f   53'
+[33m[your-program] [0mgrape strawberry.pineapple grape.blueberry mango.
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#NI6] [0m[92mTest passed.[0m
+
+[33m[tester::#GP4] [0m[94mRunning tests for Stage #GP4 (Navigation - The cd builtin: Home directory)[0m
+[33m[tester::#GP4] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/pear/pineapple/grape
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/pear/pineapple/grape
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ~
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/orange/raspberry/pear
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GP4] [0m[92mTest passed.[0m
+
+[33m[tester::#GQ9] [0m[94mRunning tests for Stage #GQ9 (Navigation - The cd builtin: Relative paths)[0m
+[33m[tester::#GQ9] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/orange
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/orange
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ./grape/pear
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/orange/grape/pear
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ../../../
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GQ9] [0m[92mTest passed.[0m
+
+[33m[tester::#RA6] [0m[94mRunning tests for Stage #RA6 (Navigation - The cd builtin: Absolute paths)[0m
+[33m[tester::#RA6] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/blueberry/strawberry/raspberry
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/blueberry/strawberry/raspberry
+[33m[tester::#RA6] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd /non-existing-directory
+[33m[your-program] [0mcd: /non: No such file or directory
+[33m[tester::#RA6] [0m[91mOutput does not match expected value.[0m
+[33m[tester::#RA6] [0m[91m[32mExpected:[0m "cd: /non-existing-directory: No such file or directory"[0m
+[33m[tester::#RA6] [0m[91m[31mReceived:[0m "cd: /non: No such file or directory"[0m
+[33m[your-program] [0m$ 
+[33m[tester::#RA6] [0m[91mAssertion failed.[0m
+[33m[tester::#RA6] [0m[91mTest failed[0m
+
+View our article on debugging test failures: https://codecrafters.io/debug
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcodecrafters test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[32m⚡ This is a turbo test run. https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#NI6] [0m[94mRunning tests for Stage #NI6 (Quoting - Single quotes)[0m
+[33m[tester::#NI6] [setup] [0m[94mexport PATH=/tmp/pineapple/mango/orange:$PATH[0m
+[33m[tester::#NI6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "strawberry pineapple." > "/tmp/baz/f   57"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "banana apple." > "/tmp/baz/f   78"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "blueberry pineapple." > "/tmp/baz/f   60"[0m
+[33m[your-program] [0m$ echo 'example shell'
+[33m[your-program] [0mexample shell
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo shell     script
+[33m[your-program] [0mshell script
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'world     test' 'script''example'
+[33m[your-program] [0mworld     test scriptexample
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat '/tmp/baz/f   57' '/tmp/baz/f   78' '/tmp/baz/f   60'
+[33m[your-program] [0mstrawberry pineapple.banana apple.blueberry pineapple.
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#NI6] [0m[92mTest passed.[0m
+
+[33m[tester::#GP4] [0m[94mRunning tests for Stage #GP4 (Navigation - The cd builtin: Home directory)[0m
+[33m[tester::#GP4] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/apple/mango/pineapple
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/apple/mango/pineapple
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ~
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/blueberry/grape/pineapple
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GP4] [0m[92mTest passed.[0m
+
+[33m[tester::#GQ9] [0m[94mRunning tests for Stage #GQ9 (Navigation - The cd builtin: Relative paths)[0m
+[33m[tester::#GQ9] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/banana
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/banana
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ./grape/mango
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/banana/grape/mango
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ../../../
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GQ9] [0m[92mTest passed.[0m
+
+[33m[tester::#RA6] [0m[94mRunning tests for Stage #RA6 (Navigation - The cd builtin: Absolute paths)[0m
+[33m[tester::#RA6] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/blueberry/mango/grape
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/blueberry/mango/grape
+[33m[tester::#RA6] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd /non-existing-directory
+[33m[your-program] [0mcd: /non: No such file or directory
+[33m[tester::#RA6] [0m[91mOutput does not match expected value.[0m
+[33m[tester::#RA6] [0m[91m[32mExpected:[0m "cd: /non-existing-directory: No such file or directory"[0m
+[33m[tester::#RA6] [0m[91m[31mReceived:[0m "cd: /non: No such file or directory"[0m
+[33m[your-program] [0m$ 
+[33m[tester::#RA6] [0m[91mAssertion failed.[0m
+[33m[tester::#RA6] [0m[91mTest failed[0m
+
+View our article on debugging test failures: https://codecrafters.io/debug
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcodecrafters test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[32m⚡ This is a turbo test run. https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#NI6] [0m[94mRunning tests for Stage #NI6 (Quoting - Single quotes)[0m
+[33m[tester::#NI6] [setup] [0m[94mexport PATH=/tmp/strawberry/orange/pineapple:$PATH[0m
+[33m[tester::#NI6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "pineapple apple." > "/tmp/quz/f   48"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "grape strawberry." > "/tmp/quz/f   47"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "strawberry raspberry." > "/tmp/quz/f   8"[0m
+[33m[your-program] [0m$ echo 'test script'
+[33m[your-program] [0mtest script
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo script     hello
+[33m[your-program] [0mscript hello
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'world     example' 'hello''test'
+[33m[your-program] [0mworld     example hellotest
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat '/tmp/quz/f   48' '/tmp/quz/f   47' '/tmp/quz/f   8'
+[33m[your-program] [0mpineapple apple.grape strawberry.strawberry raspberry.
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#NI6] [0m[92mTest passed.[0m
+
+[33m[tester::#GP4] [0m[94mRunning tests for Stage #GP4 (Navigation - The cd builtin: Home directory)[0m
+[33m[tester::#GP4] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/strawberry/apple/banana
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/strawberry/apple/banana
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ~
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/orange/banana/raspberry
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GP4] [0m[92mTest passed.[0m
+
+[33m[tester::#GQ9] [0m[94mRunning tests for Stage #GQ9 (Navigation - The cd builtin: Relative paths)[0m
+[33m[tester::#GQ9] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/pineapple
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/pineapple
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ./banana/strawberry
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/pineapple/banana/strawberry
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ../../../
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GQ9] [0m[92mTest passed.[0m
+
+[33m[tester::#RA6] [0m[94mRunning tests for Stage #RA6 (Navigation - The cd builtin: Absolute paths)[0m
+[33m[tester::#RA6] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/pineapple/strawberry/pineapple
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/pineapple/strawberry/pineapple
+[33m[tester::#RA6] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd /non-existing-directory
+[33m[your-program] [0mcd: /non: No such file or directory
+[33m[tester::#RA6] [0m[91mOutput does not match expected value.[0m
+[33m[tester::#RA6] [0m[91m[32mExpected:[0m "cd: /non-existing-directory: No such file or directory"[0m
+[33m[tester::#RA6] [0m[91m[31mReceived:[0m "cd: /non: No such file or directory"[0m
+[33m[your-program] [0m$ 
+[33m[tester::#RA6] [0m[91mAssertion failed.[0m
+[33m[tester::#RA6] [0m[91mTest failed[0m
+
+View our article on debugging test failures: https://codecrafters.io/debug
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcodecrafters test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[33m⏳ Turbo test runners busy. You are in queue.[0m
+[33m[0m
+[33mUpgrade to skip the wait: https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#NI6] [0m[94mRunning tests for Stage #NI6 (Quoting - Single quotes)[0m
+[33m[tester::#NI6] [setup] [0m[94mexport PATH=/tmp/apple/orange/pineapple:$PATH[0m
+[33m[tester::#NI6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "blueberry pear." > "/tmp/quz/f   95"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "pear pineapple." > "/tmp/quz/f   86"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "orange pineapple." > "/tmp/quz/f   29"[0m
+[33m[your-program] [0m$ echo 'world example'
+[33m[your-program] [0mworld example
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo example     hello
+[33m[your-program] [0mexample hello
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'script     shell' 'hello''world'
+[33m[your-program] [0mscript     shell helloworld
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat '/tmp/quz/f   95' '/tmp/quz/f   86' '/tmp/quz/f   29'
+[33m[your-program] [0mblueberry pear.pear pineapple.orange pineapple.
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#NI6] [0m[92mTest passed.[0m
+
+[33m[tester::#GP4] [0m[94mRunning tests for Stage #GP4 (Navigation - The cd builtin: Home directory)[0m
+[33m[tester::#GP4] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/raspberry/mango/mango
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/raspberry/mango/mango
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ~
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/orange/orange/apple
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GP4] [0m[92mTest passed.[0m
+
+[33m[tester::#GQ9] [0m[94mRunning tests for Stage #GQ9 (Navigation - The cd builtin: Relative paths)[0m
+[33m[tester::#GQ9] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/grape
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/grape
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ./grape/raspberry
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/grape/grape/raspberry
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ../../../
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GQ9] [0m[92mTest passed.[0m
+
+[33m[tester::#RA6] [0m[94mRunning tests for Stage #RA6 (Navigation - The cd builtin: Absolute paths)[0m
+[33m[tester::#RA6] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/blueberry/orange/pineapple
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/blueberry/orange/pineapple
+[33m[tester::#RA6] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd /non-existing-directory
+[33m[your-program] [0mcd: /non-existing-directory: No such file or directory
+[33m[tester::#RA6] [0m[92m✓ Received error message[0m
+[33m[your-program] [0m$ 
+[33m[tester::#RA6] [0m[92mTest passed.[0m
+
+[33m[tester::#EI0] [0m[94mRunning tests for Stage #EI0 (Navigation - The pwd builtin)[0m
+[33m[tester::#EI0] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ type pwd
+[33m[your-program] [0mpwd is a shell builtin
+[33m[tester::#EI0] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/app
+[33m[tester::#EI0] [0m[92m✓ Received current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#EI0] [0m[92mTest passed.[0m
+
+[33m[tester::#IP1] [0m[94mRunning tests for Stage #IP1 (Run a program)[0m
+[33m[tester::#IP1] [setup] [0m[94mexport PATH=/tmp/quz:$PATH[0m
+[33m[tester::#IP1] [setup] [0m[94mAvailable executables:[0m
+[33m[tester::#IP1] [setup] [0m[94m- custom_exe_1978[0m
+[33m[tester::#IP1] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ custom_exe_1978 Alice
+[33m[your-program] [0mcustom_exe_1978 Alice: command not found
+[33m[tester::#IP1] [0m[91mOutput does not match expected value.[0m
+[33m[tester::#IP1] [0m[91m[32mExpected:[0m "Program was passed 2 args (including program name)."[0m
+[33m[tester::#IP1] [0m[91m[31mReceived:[0m "custom_exe_1978 Alice: command not found"[0m
+[33m[your-program] [0m$ 
+[33m[tester::#IP1] [0m[91mAssertion failed.[0m
+[33m[tester::#IP1] [0m[91mTest failed[0m
+
+View our article on debugging test failures: https://codecrafters.io/debug
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h../your_program.sh[1m [0m[0m [?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ custom_exe_1978 Alice^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m121[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m92[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ custom_exe_1978 Alice
+Command(name='custom', args=['exe', 'Alice'], parsed=['custom', 'exe', ' ', 'Alice'])
+custom_exe_1978 Alice: command not found
+$ ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m121[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m92[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ ^[[A    custom_exe_1978 Alice
+Command(name='custom_exe_1978', args=['Alice'], parsed=['custom_exe_1978', ' ', 'Alice'])
+custom_exe_1978 Alice: command not found
+$ ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m121[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m92[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcclear[?1l>[?2004l
+]2;clear]1;clear[3J[H[2J[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hclear./your_program.sh[17Dcodecrafters test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[32m⚡ This is a turbo test run. https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#NI6] [0m[94mRunning tests for Stage #NI6 (Quoting - Single quotes)[0m
+[33m[tester::#NI6] [setup] [0m[94mexport PATH=/tmp/orange/pear/strawberry:$PATH[0m
+[33m[tester::#NI6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "raspberry banana." > "/tmp/qux/f   7"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "orange strawberry." > "/tmp/qux/f   94"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "banana apple." > "/tmp/qux/f   55"[0m
+[33m[your-program] [0m$ echo 'hello test'
+[33m[your-program] [0mCommand(name='echo', args=['hello test'], parsed=['echo', ' ', 'hello test'])
+[33m[tester::#NI6] [0m[91mOutput does not match expected value.[0m
+[33m[tester::#NI6] [0m[91m[32mExpected:[0m "hello test"[0m
+[33m[tester::#NI6] [0m[91m[31mReceived:[0m "Command(name='echo', args=['hello test'], parsed=['echo', ' ', 'hello test'])"[0m
+[33m[your-program] [0mhello test
+[33m[your-program] [0m$ 
+[33m[tester::#NI6] [0m[91mAssertion failed.[0m
+[33m[tester::#NI6] [0m[91mTest failed[0m
+
+View our article on debugging test failures: https://codecrafters.io/debug
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcodecrafters test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[33m⏳ Turbo test runners busy. You are in queue.[0m
+[33m[0m
+[33mUpgrade to skip the wait: https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#NI6] [0m[94mRunning tests for Stage #NI6 (Quoting - Single quotes)[0m
+[33m[tester::#NI6] [setup] [0m[94mexport PATH=/tmp/orange/mango/orange:$PATH[0m
+[33m[tester::#NI6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "strawberry grape." > "/tmp/foo/f   87"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "mango raspberry." > "/tmp/foo/f   50"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "pineapple blueberry." > "/tmp/foo/f   95"[0m
+[33m[your-program] [0m$ echo 'test shell'
+[33m[your-program] [0mtest shell
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo shell     script
+[33m[your-program] [0mshell script
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'world     example' 'script''test'
+[33m[your-program] [0mworld     example scripttest
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat '/tmp/foo/f   87' '/tmp/foo/f   50' '/tmp/foo/f   95'
+[33m[your-program] [0mstrawberry grape.mango raspberry.pineapple blueberry.
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#NI6] [0m[92mTest passed.[0m
+
+[33m[tester::#GP4] [0m[94mRunning tests for Stage #GP4 (Navigation - The cd builtin: Home directory)[0m
+[33m[tester::#GP4] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/grape/apple/grape
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/grape/apple/grape
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ~
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/pineapple/pineapple/pineapple
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GP4] [0m[92mTest passed.[0m
+
+[33m[tester::#GQ9] [0m[94mRunning tests for Stage #GQ9 (Navigation - The cd builtin: Relative paths)[0m
+[33m[tester::#GQ9] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/apple
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/apple
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ./raspberry/pineapple
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/apple/raspberry/pineapple
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ../../../
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GQ9] [0m[92mTest passed.[0m
+
+[33m[tester::#RA6] [0m[94mRunning tests for Stage #RA6 (Navigation - The cd builtin: Absolute paths)[0m
+[33m[tester::#RA6] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/raspberry/pineapple/pear
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/raspberry/pineapple/pear
+[33m[tester::#RA6] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd /non-existing-directory
+[33m[your-program] [0mcd: /non-existing-directory: No such file or directory
+[33m[tester::#RA6] [0m[92m✓ Received error message[0m
+[33m[your-program] [0m$ 
+[33m[tester::#RA6] [0m[92mTest passed.[0m
+
+[33m[tester::#EI0] [0m[94mRunning tests for Stage #EI0 (Navigation - The pwd builtin)[0m
+[33m[tester::#EI0] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ type pwd
+[33m[your-program] [0mpwd is a shell builtin
+[33m[tester::#EI0] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/app
+[33m[tester::#EI0] [0m[92m✓ Received current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#EI0] [0m[92mTest passed.[0m
+
+[33m[tester::#IP1] [0m[94mRunning tests for Stage #IP1 (Run a program)[0m
+[33m[tester::#IP1] [setup] [0m[94mexport PATH=/tmp/foo:$PATH[0m
+[33m[tester::#IP1] [setup] [0m[94mAvailable executables:[0m
+[33m[tester::#IP1] [setup] [0m[94m- custom_exe_5355[0m
+[33m[tester::#IP1] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ custom_exe_5355 Emily
+[33m[your-program] [0mProgram was passed 2 args (including program name).
+[33m[your-program] [0mArg #0 (program name): custom_exe_5355
+[33m[your-program] [0mArg #1: Emily
+[33m[your-program] [0mProgram Signature: 5961974636
+[33m[tester::#IP1] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#IP1] [0m[92mTest passed.[0m
+
+[33m[tester::#MG5] [0m[94mRunning tests for Stage #MG5 (The type builtin: executable files)[0m
+[33m[tester::#MG5] [setup] [0m[94mexport PATH=/tmp/quz:$PATH[0m
+[33m[tester::#MG5] [setup] [0m[94mexport PATH=/tmp/foo:$PATH[0m
+[33m[tester::#MG5] [setup] [0m[94mAvailable executables:[0m
+[33m[tester::#MG5] [setup] [0m[94m- my_exe[0m
+[33m[tester::#MG5] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ type cat
+[33m[your-program] [0mcat is /bin/cat
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type cp
+[33m[your-program] [0mcp is /bin/cp
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type mkdir
+[33m[your-program] [0mmkdir is /bin/mkdir
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type my_exe
+[33m[your-program] [0mmy_exe is /tmp/foo/my_exe
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_apple_command
+[33m[your-program] [0minvalid_apple_command: not found
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_strawberry_command
+[33m[your-program] [0minvalid_strawberry_command: not found
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#MG5] [0m[92mTest passed.[0m
+
+[33m[tester::#EZ5] [0m[94mRunning tests for Stage #EZ5 (The type builtin: builtins)[0m
+[33m[tester::#EZ5] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ type echo
+[33m[your-program] [0mecho is a shell builtin
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type exit
+[33m[your-program] [0mexit is a shell builtin
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type type
+[33m[your-program] [0mtype is a shell builtin
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_orange_command
+[33m[your-program] [0minvalid_orange_command: not found
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_apple_command
+[33m[your-program] [0minvalid_apple_command: not found
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#EZ5] [0m[92mTest passed.[0m
+
+[33m[tester::#IZ3] [0m[94mRunning tests for Stage #IZ3 (The echo builtin)[0m
+[33m[tester::#IZ3] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ echo strawberry pear orange
+[33m[your-program] [0mstrawberry pear orange
+[33m[tester::#IZ3] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo raspberry blueberry pineapple
+[33m[your-program] [0mraspberry blueberry pineapple
+[33m[tester::#IZ3] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo strawberry raspberry
+[33m[your-program] [0mstrawberry raspberry
+[33m[tester::#IZ3] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#IZ3] [0m[92mTest passed.[0m
+
+[33m[tester::#PN5] [0m[94mRunning tests for Stage #PN5 (The exit builtin)[0m
+[33m[tester::#PN5] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ invalid_apple_command
+[33m[your-program] [0minvalid_apple_command: command not found
+[33m[tester::#PN5] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ exit 0
+[33m[tester::#PN5] [0m[92m✓ Program exited successfully[0m
+[33m[tester::#PN5] [0m[92m✓ No output after exit command[0m
+[33m[tester::#PN5] [0m[92mTest passed.[0m
+
+[33m[tester::#FF0] [0m[94mRunning tests for Stage #FF0 (REPL)[0m
+[33m[tester::#FF0] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ invalid_command_1
+[33m[your-program] [0minvalid_command_1: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ invalid_command_2
+[33m[your-program] [0minvalid_command_2: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ invalid_command_3
+[33m[your-program] [0minvalid_command_3: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ 
+[33m[tester::#FF0] [0m[92mTest passed.[0m
+
+[33m[tester::#CZ2] [0m[94mRunning tests for Stage #CZ2 (Handle invalid commands)[0m
+[33m[tester::#CZ2] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ invalid_pineapple_command
+[33m[your-program] [0minvalid_pineapple_command: command not found
+[33m[tester::#CZ2] [0m[92m✓ Received command not found message[0m
+[33m[tester::#CZ2] [0m[92mTest passed.[0m
+
+[33m[tester::#OO8] [0m[94mRunning tests for Stage #OO8 (Print a prompt)[0m
+[33m[tester::#OO8] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ 
+[33m[tester::#OO8] [0m[92m✓ Received prompt[0m
+[33m[tester::#OO8] [0m[92mTest passed.[0m
+
+Test passed. Congrats!
+
+[32mSubmit your changes to move to the next step:[0m
+[32m[0m
+[32m$ codecrafters submit[0m
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h

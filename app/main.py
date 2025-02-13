@@ -1,6 +1,14 @@
 import sys
 import os
 import subprocess
+from typing import NamedTuple
+
+
+class Command(NamedTuple):
+    name: str
+    args: list[str]
+    parsed: list[str]
+
 
 SHELL_BUILTIN = lambda x: f"{x} is a shell builtin"  # noqa
 
@@ -40,18 +48,56 @@ def cd(path: str) -> None:
     print(f"cd: {path}: No such file or directory")
 
 
+def parser(cmd: str):
+    import re
+
+    identifier = r"[\w/~\.-]+"
+    string = r"'[/\w\s~\.-]+'"
+    dash_arg = r"-[A-Za-z0-9]+"
+    dash_dash_arg = r"--[A-Za-z0-9]+"
+    space = r"[ \t]+"
+    regex_spec = [
+        ("CMD", identifier),
+        ("SQUOTE", string),
+        ("DASHARG", dash_arg),
+        ("DDARG", dash_dash_arg),
+        ("SPACE", space),
+    ]
+    parser = "|".join("(?P<%s>%s)" % pair for pair in regex_spec)
+
+    name = ""
+    args = []
+    parsed = []
+    for mo in re.finditer(parser, cmd):
+        kind = mo.lastgroup
+        value = mo.group()
+        if kind == "CMD" and not name:
+            name = value
+            parsed.append(name)
+        elif kind == "SQUOTE":
+            args.append(value[1:-1])
+            parsed.append(value[1:-1])
+        elif kind == "SPACE":
+            # replace with single space
+            parsed.append(" ")
+        else:
+            args.append(value)
+            parsed.append(value)
+    return Command(name, args, parsed)
+
+
 def main():
     while True:
         sys.stdout.write("$ ")
         cmd_raw = input()
-        cmd = cmd_raw.split(" ")
+        cmd = parser(cmd_raw)
         if not cmd:
             return f"{cmd_raw}: command not found"
-        cmd_name, args = cmd[0], cmd[1:]
+        cmd_name, args, parsed = cmd.name, cmd.args, cmd.parsed
         if cmd_name == "exit":
             sys.exit(0)
         elif cmd_name == "echo":
-            print(" ".join(args))
+            print("".join(parsed[1:]).strip())
         elif cmd_name == "pwd":
             pwd()
         elif cmd_name == "cd":
@@ -65,7 +111,7 @@ def main():
                 print(f"{args[0]}: not found")
         else:
             if find_exec_in_path(cmd_name):
-                subprocess.run(cmd)
+                subprocess.run([cmd_name, *args])
             else:
                 print(f"{cmd_raw}: command not found")
 
