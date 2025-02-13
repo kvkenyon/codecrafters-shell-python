@@ -4,7 +4,7 @@ import subprocess
 
 SHELL_BUILTIN = lambda x: f"{x} is a shell builtin"  # noqa
 
-BUILTINS = set(["echo", "exit", "type", "pwd"])
+BUILTINS = set(["echo", "exit", "type", "pwd", "cd"])
 
 
 PATH = os.environ["PATH"]
@@ -31,6 +31,13 @@ def exit():
     sys.exit(0)
 
 
+def cd(path: str) -> None:
+    if os.path.exists(path):
+        os.chdir(path)
+        return
+    print(f"cd: {path}: No such file or directory")
+
+
 def main():
     while True:
         sys.stdout.write("$ ")
@@ -45,6 +52,8 @@ def main():
             print(" ".join(args))
         elif cmd_name == "pwd":
             pwd()
+        elif cmd_name == "cd":
+            cd(args[0])
         elif cmd_name == "type":
             if args[0] in BUILTINS:
                 print(SHELL_BUILTIN(args[0]))
