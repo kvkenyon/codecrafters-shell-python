@@ -52,16 +52,18 @@ def parser(cmd: str):
     import re
 
     identifier = r"[\w/~\.-]+"
-    string = r"'[/\w\s~\.-]+'"
-    dquote = r'"[/\w\s~\.\'-]+"'
+    string = r"'[/\w\s~\.-\\]+'"
+    dquote = r'"[/\w\s~\.\'-\\]+"'
     dash_arg = r"-[A-Za-z0-9]+"
     dash_dash_arg = r"--[A-Za-z0-9]+"
     space = r"[ \t]+"
+    escape = r"\\."
     regex_spec = [
         ("CMD", identifier),
         ("SQUOTE", string),
         ("DQUOTE", dquote),
         ("DASHARG", dash_arg),
+        ("ESCAPE", escape),
         ("DDARG", dash_dash_arg),
         ("SPACE", space),
     ]
@@ -80,8 +82,9 @@ def parser(cmd: str):
             args.append(value[1:-1])
             parsed.append(value[1:-1])
         elif kind == "SPACE":
-            # replace with single space
             parsed.append(" ")
+        elif kind == "ESCAPE":
+            parsed.append(value[-1])
         else:
             args.append(value)
             parsed.append(value)
@@ -93,6 +96,7 @@ def main():
         sys.stdout.write("$ ")
         cmd_raw = input()
         cmd = parser(cmd_raw)
+        # print(cmd)
         if not cmd:
             return f"{cmd_raw}: command not found"
         cmd_name, args, parsed = cmd.name, cmd.args, cmd.parsed
