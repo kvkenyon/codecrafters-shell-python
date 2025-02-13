@@ -41,8 +41,7 @@ def main():
                 print(f"{args[0]}: not found")
         else:
             if find_exec_in_path(cmd_name):
-                res = subprocess.run(cmd, capture_output=True, text=True)
-                print(res.stdout)
+                subprocess.run(cmd)
             else:
                 print(f"{cmd_raw}: command not found")
 
