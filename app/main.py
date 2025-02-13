@@ -1,6 +1,6 @@
 import sys
 
-SHELL_BUILTIN = lambda x: f"{x} is a shell built in"  # noqa
+SHELL_BUILTIN = lambda x: f"{x} is a shell builtin"  # noqa
 
 BUILTINS = set(["echo", "exit", "type"])
 
