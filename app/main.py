@@ -40,8 +40,8 @@ def main():
             else:
                 print(f"{args[0]}: not found")
         else:
-            if c := find_exec_in_path(cmd_name):
-                res = subprocess.run([c, *args], capture_output=True, text=True)
+            if find_exec_in_path(cmd_name):
+                res = subprocess.run(cmd, capture_output=True, text=True)
                 print(res.stdout)
             else:
                 print(f"{cmd_raw}: command not found")
