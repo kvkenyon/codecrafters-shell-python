@@ -53,12 +53,14 @@ def parser(cmd: str):
 
     identifier = r"[\w/~\.-]+"
     string = r"'[/\w\s~\.-]+'"
+    dquote = r'"[/\w\s~\.\'-]+"'
     dash_arg = r"-[A-Za-z0-9]+"
     dash_dash_arg = r"--[A-Za-z0-9]+"
     space = r"[ \t]+"
     regex_spec = [
         ("CMD", identifier),
         ("SQUOTE", string),
+        ("DQUOTE", dquote),
         ("DASHARG", dash_arg),
         ("DDARG", dash_dash_arg),
         ("SPACE", space),
@@ -74,7 +76,7 @@ def parser(cmd: str):
         if kind == "CMD" and not name:
             name = value
             parsed.append(name)
-        elif kind == "SQUOTE":
+        elif kind == "SQUOTE" or kind == "DQUOTE":
             args.append(value[1:-1])
             parsed.append(value[1:-1])
         elif kind == "SPACE":

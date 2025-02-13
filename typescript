@@ -1182,4 +1182,599 @@ Test passed. Congrats!
 [32mSubmit your changes to move to the next step:[0m
 [32m[0m
 [32m$ codecrafters submit[0m
-[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hccode c crafters submit[?1l>[?2004l
+]2;codecrafters submit]1;codecraftersSubmitting changes (commit: 3a0feb4)...
+
+[32m⚡ This is a turbo test run. https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#NI6] [0m[94mRunning tests for Stage #NI6 (Quoting - Single quotes)[0m
+[33m[tester::#NI6] [setup] [0m[94mexport PATH=/tmp/orange/orange/raspberry:$PATH[0m
+[33m[tester::#NI6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "grape strawberry." > "/tmp/quz/f   52"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "mango pineapple." > "/tmp/quz/f   41"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "raspberry blueberry." > "/tmp/quz/f   73"[0m
+[33m[your-program] [0m$ echo 'shell test'
+[33m[your-program] [0mshell test
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo test     world
+[33m[your-program] [0mtest world
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'script     example' 'world''shell'
+[33m[your-program] [0mscript     example worldshell
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat '/tmp/quz/f   52' '/tmp/quz/f   41' '/tmp/quz/f   73'
+[33m[your-program] [0mgrape strawberry.mango pineapple.raspberry blueberry.
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#NI6] [0m[92mTest passed.[0m
+
+[33m[tester::#GP4] [0m[94mRunning tests for Stage #GP4 (Navigation - The cd builtin: Home directory)[0m
+[33m[tester::#GP4] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/grape/orange/strawberry
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/grape/orange/strawberry
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ~
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/apple/pear/grape
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GP4] [0m[92mTest passed.[0m
+
+[33m[tester::#GQ9] [0m[94mRunning tests for Stage #GQ9 (Navigation - The cd builtin: Relative paths)[0m
+[33m[tester::#GQ9] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/pear
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/pear
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ./pineapple/raspberry
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/pear/pineapple/raspberry
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ../../../
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GQ9] [0m[92mTest passed.[0m
+
+[33m[tester::#RA6] [0m[94mRunning tests for Stage #RA6 (Navigation - The cd builtin: Absolute paths)[0m
+[33m[tester::#RA6] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/banana/orange/pineapple
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/banana/orange/pineapple
+[33m[tester::#RA6] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd /non-existing-directory
+[33m[your-program] [0mcd: /non-existing-directory: No such file or directory
+[33m[tester::#RA6] [0m[92m✓ Received error message[0m
+[33m[your-program] [0m$ 
+[33m[tester::#RA6] [0m[92mTest passed.[0m
+
+[33m[tester::#EI0] [0m[94mRunning tests for Stage #EI0 (Navigation - The pwd builtin)[0m
+[33m[tester::#EI0] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ type pwd
+[33m[your-program] [0mpwd is a shell builtin
+[33m[tester::#EI0] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/app
+[33m[tester::#EI0] [0m[92m✓ Received current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#EI0] [0m[92mTest passed.[0m
+
+[33m[tester::#IP1] [0m[94mRunning tests for Stage #IP1 (Run a program)[0m
+[33m[tester::#IP1] [setup] [0m[94mexport PATH=/tmp/baz:$PATH[0m
+[33m[tester::#IP1] [setup] [0m[94mAvailable executables:[0m
+[33m[tester::#IP1] [setup] [0m[94m- custom_exe_6225[0m
+[33m[tester::#IP1] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ custom_exe_6225 David
+[33m[your-program] [0mProgram was passed 2 args (including program name).
+[33m[your-program] [0mArg #0 (program name): custom_exe_6225
+[33m[your-program] [0mArg #1: David
+[33m[your-program] [0mProgram Signature: 1889983261
+[33m[tester::#IP1] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#IP1] [0m[92mTest passed.[0m
+
+[33m[tester::#MG5] [0m[94mRunning tests for Stage #MG5 (The type builtin: executable files)[0m
+[33m[tester::#MG5] [setup] [0m[94mexport PATH=/tmp/quz:$PATH[0m
+[33m[tester::#MG5] [setup] [0m[94mexport PATH=/tmp/baz:$PATH[0m
+[33m[tester::#MG5] [setup] [0m[94mAvailable executables:[0m
+[33m[tester::#MG5] [setup] [0m[94m- my_exe[0m
+[33m[tester::#MG5] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ type cat
+[33m[your-program] [0mcat is /bin/cat
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type cp
+[33m[your-program] [0mcp is /bin/cp
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type mkdir
+[33m[your-program] [0mmkdir is /bin/mkdir
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type my_exe
+[33m[your-program] [0mmy_exe is /tmp/baz/my_exe
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_apple_command
+[33m[your-program] [0minvalid_apple_command: not found
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_grape_command
+[33m[your-program] [0minvalid_grape_command: not found
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#MG5] [0m[92mTest passed.[0m
+
+[33m[tester::#EZ5] [0m[94mRunning tests for Stage #EZ5 (The type builtin: builtins)[0m
+[33m[tester::#EZ5] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ type echo
+[33m[your-program] [0mecho is a shell builtin
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type exit
+[33m[your-program] [0mexit is a shell builtin
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type type
+[33m[your-program] [0mtype is a shell builtin
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_grape_command
+[33m[your-program] [0minvalid_grape_command: not found
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_pineapple_command
+[33m[your-program] [0minvalid_pineapple_command: not found
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#EZ5] [0m[92mTest passed.[0m
+
+[33m[tester::#IZ3] [0m[94mRunning tests for Stage #IZ3 (The echo builtin)[0m
+[33m[tester::#IZ3] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ echo blueberry grape
+[33m[your-program] [0mblueberry grape
+[33m[tester::#IZ3] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo pear mango
+[33m[your-program] [0mpear mango
+[33m[tester::#IZ3] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#IZ3] [0m[92mTest passed.[0m
+
+[33m[tester::#PN5] [0m[94mRunning tests for Stage #PN5 (The exit builtin)[0m
+[33m[tester::#PN5] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ invalid_pear_command
+[33m[your-program] [0minvalid_pear_command: command not found
+[33m[tester::#PN5] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ exit 0
+[33m[tester::#PN5] [0m[92m✓ Program exited successfully[0m
+[33m[tester::#PN5] [0m[92m✓ No output after exit command[0m
+[33m[tester::#PN5] [0m[92mTest passed.[0m
+
+[33m[tester::#FF0] [0m[94mRunning tests for Stage #FF0 (REPL)[0m
+[33m[tester::#FF0] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ invalid_command_1
+[33m[your-program] [0minvalid_command_1: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ invalid_command_2
+[33m[your-program] [0minvalid_command_2: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ invalid_command_3
+[33m[your-program] [0minvalid_command_3: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ invalid_command_4
+[33m[your-program] [0minvalid_command_4: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ invalid_command_5
+[33m[your-program] [0minvalid_command_5: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ 
+[33m[tester::#FF0] [0m[92mTest passed.[0m
+
+[33m[tester::#CZ2] [0m[94mRunning tests for Stage #CZ2 (Handle invalid commands)[0m
+[33m[tester::#CZ2] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ invalid_orange_command
+[33m[your-program] [0minvalid_orange_command: command not found
+[33m[tester::#CZ2] [0m[92m✓ Received command not found message[0m
+[33m[tester::#CZ2] [0m[92mTest passed.[0m
+
+[33m[tester::#OO8] [0m[94mRunning tests for Stage #OO8 (Print a prompt)[0m
+[33m[tester::#OO8] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ 
+[33m[tester::#OO8] [0m[92m✓ Received prompt[0m
+[33m[tester::#OO8] [0m[92mTest passed.[0m
+
+Test passed. Congrats!
+
+[32mMove to the next step: https://app.codecrafters.io/courses/shell[0m
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcodecrafters submittest  [?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[32m⚡ This is a turbo test run. https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#TG6] [0m[94mRunning tests for Stage #TG6 (Quoting - Double quotes)[0m
+[33m[tester::#TG6] [setup] [0m[94mexport PATH=/tmp/banana/blueberry/grape:$PATH[0m
+[33m[tester::#TG6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "grape orange." > "/tmp/bar/f 27"[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "banana blueberry." > "/tmp/bar/f   97"[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "mango strawberry." > "/tmp/bar/f's84"[0m
+[33m[your-program] [0m$ echo "script example"
+[33m[your-program] [0mTraceback (most recent call last):
+[33m[tester::#TG6] [0m[91mOutput does not match expected value.[0m
+[33m[tester::#TG6] [0m[91m[32mExpected:[0m "script example"[0m
+[33m[tester::#TG6] [0m[91m[31mReceived:[0m "Traceback (most recent call last):"[0m
+[33m[your-program] [0m  File "<frozen runpy>", line 198, in _run_module_as_main
+[33m[your-program] [0m  File "<frozen runpy>", line 88, in _run_code
+[33m[your-program] [0m  File "/app/app/main.py", line 122, in <module>
+[33m[your-program] [0m    main()
+[33m[your-program] [0m  File "/app/app/main.py", line 95, in main
+[33m[your-program] [0m    cmd = parser(cmd_raw)
+[33m[your-program] [0m          ^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/app/app/main.py", line 73, in parser
+[33m[your-program] [0m    for mo in re.finditer(parser, cmd):
+[33m[your-program] [0m              ^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/__init__.py", line 224, in finditer
+[33m[your-program] [0m    return _compile(pattern, flags).finditer(string)
+[33m[your-program] [0m           ^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/__init__.py", line 307, in _compile
+[33m[your-program] [0m    p = _compiler.compile(pattern, flags)
+[33m[your-program] [0m        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/_compiler.py", line 750, in compile
+[33m[your-program] [0m    p = _parser.parse(p, flags)
+[33m[your-program] [0m        ^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/_parser.py", line 979, in parse
+[33m[your-program] [0m    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+[33m[your-program] [0m        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/_parser.py", line 460, in _parse_sub
+[33m[your-program] [0m    itemsappend(_parse(source, state, verbose, nested + 1,
+[33m[your-program] [0m                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/_parser.py", line 862, in _parse
+[33m[your-program] [0m    p = _parse_sub(source, state, sub_verbose, nested + 1)
+[33m[your-program] [0m        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/_parser.py", line 460, in _parse_sub
+[33m[your-program] [0m    itemsappend(_parse(source, state, verbose, nested + 1,
+[33m[your-program] [0m                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/_parser.py", line 617, in _parse
+[33m[your-program] [0m    raise source.error(msg, len(this) + 1 + len(that))
+[33m[your-program] [0mre.error: bad character range \.-\' at position 68
+[33m[tester::#TG6] [0m[91mAssertion failed.[0m
+[33m[tester::#TG6] [0m[91mTest failed[0m
+
+View our article on debugging test failures: https://codecrafters.io/debug
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcodecrafters test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[32m⚡ This is a turbo test run. https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#TG6] [0m[94mRunning tests for Stage #TG6 (Quoting - Double quotes)[0m
+[33m[tester::#TG6] [setup] [0m[94mexport PATH=/tmp/pear/orange/pear:$PATH[0m
+[33m[tester::#TG6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "pear pineapple." > "/tmp/quz/f 84"[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "apple orange." > "/tmp/quz/f   67"[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "pear apple." > "/tmp/quz/f's9"[0m
+[33m[your-program] [0m$ echo "hello test"
+[33m[your-program] [0mTraceback (most recent call last):
+[33m[tester::#TG6] [0m[91mOutput does not match expected value.[0m
+[33m[tester::#TG6] [0m[91m[32mExpected:[0m "hello test"[0m
+[33m[tester::#TG6] [0m[91m[31mReceived:[0m "Traceback (most recent call last):"[0m
+[33m[your-program] [0m  File "<frozen runpy>", line 198, in _run_module_as_main
+[33m[your-program] [0m  File "<frozen runpy>", line 88, in _run_code
+[33m[your-program] [0m  File "/app/app/main.py", line 122, in <module>
+[33m[your-program] [0m    main()
+[33m[your-program] [0m  File "/app/app/main.py", line 95, in main
+[33m[your-program] [0m    cmd = parser(cmd_raw)
+[33m[your-program] [0m          ^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/app/app/main.py", line 73, in parser
+[33m[your-program] [0m    for mo in re.finditer(parser, cmd):
+[33m[your-program] [0m              ^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/__init__.py", line 224, in finditer
+[33m[your-program] [0m    return _compile(pattern, flags).finditer(string)
+[33m[your-program] [0m           ^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/__init__.py", line 307, in _compile
+[33m[your-program] [0m    p = _compiler.compile(pattern, flags)
+[33m[your-program] [0m        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/_compiler.py", line 750, in compile
+[33m[your-program] [0m    p = _parser.parse(p, flags)
+[33m[your-program] [0m        ^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/_parser.py", line 979, in parse
+[33m[your-program] [0m    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+[33m[your-program] [0m        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/_parser.py", line 460, in _parse_sub
+[33m[your-program] [0m    itemsappend(_parse(source, state, verbose, nested + 1,
+[33m[your-program] [0m                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/_parser.py", line 862, in _parse
+[33m[your-program] [0m    p = _parse_sub(source, state, sub_verbose, nested + 1)
+[33m[your-program] [0m        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/_parser.py", line 460, in _parse_sub
+[33m[your-program] [0m    itemsappend(_parse(source, state, verbose, nested + 1,
+[33m[your-program] [0m                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/_parser.py", line 617, in _parse
+[33m[your-program] [0m    raise source.error(msg, len(this) + 1 + len(that))
+[33m[your-program] [0mre.error: bad character range \.-\' at position 66
+[33m[tester::#TG6] [0m[91mAssertion failed.[0m
+[33m[tester::#TG6] [0m[91mTest failed[0m
+
+View our article on debugging test failures: https://codecrafters.io/debug
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcodecrafters test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[32m⚡ This is a turbo test run. https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#TG6] [0m[94mRunning tests for Stage #TG6 (Quoting - Double quotes)[0m
+[33m[tester::#TG6] [setup] [0m[94mexport PATH=/tmp/mango/mango/apple:$PATH[0m
+[33m[tester::#TG6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "raspberry apple." > "/tmp/quz/f 52"[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "orange raspberry." > "/tmp/quz/f   76"[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "pear mango." > "/tmp/quz/f's71"[0m
+[33m[your-program] [0m$ echo "world test"
+[33m[your-program] [0mworld test
+[33m[tester::#TG6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo "test  hello"  "shell""world"
+[33m[your-program] [0mtest  hello shellworld
+[33m[tester::#TG6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo "shell"  "script's"  "test"
+[33m[your-program] [0mshell scripts  test
+[33m[tester::#TG6] [0m[91mOutput does not match expected value.[0m
+[33m[tester::#TG6] [0m[91m[32mExpected:[0m "shell script's test"[0m
+[33m[tester::#TG6] [0m[91m[31mReceived:[0m "shell scripts  test"[0m
+[33m[your-program] [0m$ 
+[33m[tester::#TG6] [0m[91mAssertion failed.[0m
+[33m[tester::#TG6] [0m[91mTest failed[0m
+
+View our article on debugging test failures: https://codecrafters.io/debug
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcodecrafters test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[33m⏳ Turbo test runners busy. You are in queue.[0m
+[33m[0m
+[33mUpgrade to skip the wait: https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#TG6] [0m[94mRunning tests for Stage #TG6 (Quoting - Double quotes)[0m
+[33m[tester::#TG6] [setup] [0m[94mexport PATH=/tmp/blueberry/banana/grape:$PATH[0m
+[33m[tester::#TG6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "pear mango." > "/tmp/qux/f 93"[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "orange pear." > "/tmp/qux/f   85"[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "raspberry strawberry." > "/tmp/qux/f's61"[0m
+[33m[your-program] [0m$ echo "hello shell"
+[33m[your-program] [0mTraceback (most recent call last):
+[33m[tester::#TG6] [0m[91mOutput does not match expected value.[0m
+[33m[tester::#TG6] [0m[91m[32mExpected:[0m "hello shell"[0m
+[33m[tester::#TG6] [0m[91m[31mReceived:[0m "Traceback (most recent call last):"[0m
+[33m[your-program] [0m  File "<frozen runpy>", line 198, in _run_module_as_main
+[33m[your-program] [0m  File "<frozen runpy>", line 88, in _run_code
+[33m[your-program] [0m  File "/app/app/main.py", line 122, in <module>
+[33m[your-program] [0m    main()
+[33m[your-program] [0m  File "/app/app/main.py", line 95, in main
+[33m[your-program] [0m    cmd = parser(cmd_raw)
+[33m[your-program] [0m          ^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/app/app/main.py", line 73, in parser
+[33m[your-program] [0m    for mo in re.finditer(parser, cmd):
+[33m[your-program] [0m              ^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/__init__.py", line 224, in finditer
+[33m[your-program] [0m    return _compile(pattern, flags).finditer(string)
+[33m[your-program] [0m           ^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/__init__.py", line 307, in _compile
+[33m[your-program] [0m    p = _compiler.compile(pattern, flags)
+[33m[your-program] [0m        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/_compiler.py", line 750, in compile
+[33m[your-program] [0m    p = _parser.parse(p, flags)
+[33m[your-program] [0m        ^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/_parser.py", line 979, in parse
+[33m[your-program] [0m    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+[33m[your-program] [0m        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/_parser.py", line 460, in _parse_sub
+[33m[your-program] [0m    itemsappend(_parse(source, state, verbose, nested + 1,
+[33m[your-program] [0m                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/_parser.py", line 862, in _parse
+[33m[your-program] [0m    p = _parse_sub(source, state, sub_verbose, nested + 1)
+[33m[your-program] [0m        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/_parser.py", line 460, in _parse_sub
+[33m[your-program] [0m    itemsappend(_parse(source, state, verbose, nested + 1,
+[33m[your-program] [0m                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[33m[your-program] [0m  File "/usr/local/lib/python3.12/re/_parser.py", line 617, in _parse
+[33m[your-program] [0m    raise source.error(msg, len(this) + 1 + len(that))
+[33m[your-program] [0mre.error: bad character range \.-\' at position 66
+[33m[tester::#TG6] [0m[91mAssertion failed.[0m
+[33m[tester::#TG6] [0m[91mTest failed[0m
+
+View our article on debugging test failures: https://codecrafters.io/debug
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcodecrafters test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[33m⏳ Turbo test runners busy. You are in queue.[0m
+[33m[0m
+[33mUpgrade to skip the wait: https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#TG6] [0m[94mRunning tests for Stage #TG6 (Quoting - Double quotes)[0m
+[33m[tester::#TG6] [setup] [0m[94mexport PATH=/tmp/banana/mango/grape:$PATH[0m
+[33m[tester::#TG6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "raspberry banana." > "/tmp/qux/f 2"[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "blueberry pineapple." > "/tmp/qux/f   89"[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "orange raspberry." > "/tmp/qux/f's87"[0m
+[33m[your-program] [0m$ echo "world shell"
+[33m[your-program] [0mworld shell
+[33m[tester::#TG6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo "shell  script"  "test""world"
+[33m[your-program] [0mshell  script testworld
+[33m[tester::#TG6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo "test"  "example's"  "shell"
+[33m[your-program] [0mtest example's shell
+[33m[tester::#TG6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat "/tmp/qux/f 2" "/tmp/qux/f   89" "/tmp/qux/f's87"
+[33m[your-program] [0mraspberry banana.blueberry pineapple.orange raspberry.
+[33m[tester::#TG6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#TG6] [0m[92mTest passed.[0m
+
+[33m[tester::#NI6] [0m[94mRunning tests for Stage #NI6 (Quoting - Single quotes)[0m
+[33m[tester::#NI6] [setup] [0m[94mexport PATH=/tmp/pear/raspberry/raspberry:$PATH[0m
+[33m[tester::#NI6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "pear apple." > "/tmp/quz/f   32"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "grape apple." > "/tmp/quz/f   18"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "pear blueberry." > "/tmp/quz/f   91"[0m
+[33m[your-program] [0m$ echo 'hello example'
+[33m[your-program] [0mhello example
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo example     world
+[33m[your-program] [0mexample world
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'shell     test' 'world''hello'
+[33m[your-program] [0mshell     test worldhello
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat '/tmp/quz/f   32' '/tmp/quz/f   18' '/tmp/quz/f   91'
+[33m[your-program] [0mpear apple.grape apple.pear blueberry.
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#NI6] [0m[92mTest passed.[0m
+
+[33m[tester::#GP4] [0m[94mRunning tests for Stage #GP4 (Navigation - The cd builtin: Home directory)[0m
+[33m[tester::#GP4] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/grape/blueberry/banana
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/grape/blueberry/banana
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ~
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/pineapple/orange/raspberry
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GP4] [0m[92mTest passed.[0m
+
+[33m[tester::#GQ9] [0m[94mRunning tests for Stage #GQ9 (Navigation - The cd builtin: Relative paths)[0m
+[33m[tester::#GQ9] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/orange
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/orange
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ./orange/pineapple
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/orange/orange/pineapple
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ../../../
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GQ9] [0m[92mTest passed.[0m
+
+[33m[tester::#RA6] [0m[94mRunning tests for Stage #RA6 (Navigation - The cd builtin: Absolute paths)[0m
+[33m[tester::#RA6] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/grape/pear/pineapple
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/grape/pear/pineapple
+[33m[tester::#RA6] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd /non-existing-directory
+[33m[your-program] [0mcd: /non-existing-directory: No such file or directory
+[33m[tester::#RA6] [0m[92m✓ Received error message[0m
+[33m[your-program] [0m$ 
+[33m[tester::#RA6] [0m[92mTest passed.[0m
+
+[33m[tester::#EI0] [0m[94mRunning tests for Stage #EI0 (Navigation - The pwd builtin)[0m
+[33m[tester::#EI0] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ type pwd
+[33m[your-program] [0mpwd is a shell builtin
+[33m[tester::#EI0] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/app
+[33m[tester::#EI0] [0m[92m✓ Received current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#EI0] [0m[92mTest passed.[0m
+
+[33m[tester::#IP1] [0m[94mRunning tests for Stage #IP1 (Run a program)[0m
+[33m[tester::#IP1] [setup] [0m[94mexport PATH=/tmp/qux:$PATH[0m
+[33m[tester::#IP1] [setup] [0m[94mAvailable executables:[0m
+[33m[tester::#IP1] [setup] [0m[94m- custom_exe_1219[0m
+[33m[tester::#IP1] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ custom_exe_1219 Alice
+[33m[your-program] [0mProgram was passed 2 args (including program name).
+[33m[your-program] [0mArg #0 (program name): custom_exe_1219
+[33m[your-program] [0mArg #1: Alice
+[33m[your-program] [0mProgram Signature: 8632819320
+[33m[tester::#IP1] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#IP1] [0m[92mTest passed.[0m
+
+[33m[tester::#MG5] [0m[94mRunning tests for Stage #MG5 (The type builtin: executable files)[0m
+[33m[tester::#MG5] [setup] [0m[94mexport PATH=/tmp/foo:$PATH[0m
+[33m[tester::#MG5] [setup] [0m[94mexport PATH=/tmp/qux:$PATH[0m
+[33m[tester::#MG5] [setup] [0m[94mAvailable executables:[0m
+[33m[tester::#MG5] [setup] [0m[94m- my_exe[0m
+[33m[tester::#MG5] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ type cat
+[33m[your-program] [0mcat is /bin/cat
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type cp
+[33m[your-program] [0mcp is /bin/cp
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type mkdir
+[33m[your-program] [0mmkdir is /bin/mkdir
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type my_exe
+[33m[your-program] [0mmy_exe is /tmp/qux/my_exe
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_pear_command
+[33m[your-program] [0minvalid_pear_command: not found
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_blueberry_command
+[33m[your-program] [0minvalid_blueberry_command: not found
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#MG5] [0m[92mTest passed.[0m
+
+[33m[tester::#EZ5] [0m[94mRunning tests for Stage #EZ5 (The type builtin: builtins)[0m
+[33m[tester::#EZ5] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ type echo
+[33m[your-program] [0mecho is a shell builtin
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type exit
+[33m[your-program] [0mexit is a shell builtin
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type type
+[33m[your-program] [0mtype is a shell builtin
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_grape_command
+[33m[your-program] [0minvalid_grape_command: not found
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_pineapple_command
+[33m[your-program] [0minvalid_pineapple_command: not found
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#EZ5] [0m[92mTest passed.[0m
+
+[33m[tester::#IZ3] [0m[94mRunning tests for Stage #IZ3 (The echo builtin)[0m
+[33m[tester::#IZ3] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ echo strawberry orange pear
