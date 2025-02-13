@@ -3140,4 +3140,260 @@ Debug = true
 Test passed. Congrats!
 
 [32mMove to the next step: https://app.codecrafters.io/courses/shell[0m
-[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcodecrafters submit[?1l>[?2004l
+]2;codecrafters submit]1;codecraftersSubmitting changes (commit: fe91adc)...
+
+[32m⚡ This is a turbo test run. https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#LE5] [0m[94mRunning tests for Stage #LE5 (Quoting - Backslash within single quotes)[0m
+[33m[tester::#LE5] [setup] [0m[94mexport PATH=/tmp/mango/pineapple/grape:$PATH[0m
+[33m[tester::#LE5] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#LE5] [setup] [0m[94mecho -n "grape strawberry." > "/tmp/bar/'f 49'"[0m
+[33m[tester::#LE5] [setup] [0m[94mecho -n "apple pineapple." > "/tmp/bar/'f  \\11'"[0m
+[33m[tester::#LE5] [setup] [0m[94mecho -n "apple grape." > "/tmp/bar/'f \\75\\'"[0m
+[33m[your-program] [0m$ echo 'example\\nhello'
+[33m[your-program] [0mexample\\nhello
+[33m[tester::#LE5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'test\"scriptworld\"example'
+[33m[your-program] [0mtest"scriptworld"example
+[33m[tester::#LE5] [0m[91mOutput does not match expected value.[0m
+[33m[tester::#LE5] [0m[91m[32mExpected:[0m "test\"scriptworld\"example"[0m
+[33m[tester::#LE5] [0m[91m[31mReceived:[0m "test"scriptworld"example"[0m
+[33m[your-program] [0m$ 
+[33m[tester::#LE5] [0m[91mAssertion failed.[0m
+[33m[tester::#LE5] [0m[91mTest failed[0m
+
+View our article on debugging test failures: https://codecrafters.io/debug
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m)[00m [Kcodecrafters submit      test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[32m⚡ This is a turbo test run. https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#LE5] [0m[94mRunning tests for Stage #LE5 (Quoting - Backslash within single quotes)[0m
+[33m[tester::#LE5] [setup] [0m[94mexport PATH=/tmp/blueberry/raspberry/grape:$PATH[0m
+[33m[tester::#LE5] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#LE5] [setup] [0m[94mecho -n "orange pear." > "/tmp/bar/'f 37'"[0m
+[33m[tester::#LE5] [setup] [0m[94mecho -n "mango banana." > "/tmp/bar/'f  \\82'"[0m
+[33m[tester::#LE5] [setup] [0m[94mecho -n "banana apple." > "/tmp/bar/'f \\40\\'"[0m
+[33m[your-program] [0m$ echo 'test\\nworld'
+[33m[your-program] [0mtest\\nworld
+[33m[tester::#LE5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'example\"shellhello\"test'
+[33m[your-program] [0mexample\"shellhello\"test
+[33m[tester::#LE5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'hello\\nworld'
+[33m[your-program] [0mhello\\nworld
+[33m[tester::#LE5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat "/tmp/bar/'f 37'" "/tmp/bar/'f  \82'" "/tmp/bar/'f \40\'"
+[33m[your-program] [0morange pear.mango banana.banana apple.
+[33m[tester::#LE5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#LE5] [0m[92mTest passed.[0m
+
+[33m[tester::#YT5] [0m[94mRunning tests for Stage #YT5 (Quoting - Backslash outside quotes)[0m
+[33m[tester::#YT5] [setup] [0m[94mexport PATH=/tmp/grape/pineapple/blueberry:$PATH[0m
+[33m[tester::#YT5] [setup] [0m[94mecho -n "blueberry mango." > "/tmp/quz/f\\n75"[0m
+[33m[tester::#YT5] [setup] [0m[94mecho -n "pear strawberry." > "/tmp/quz/f\\65"[0m
+[33m[tester::#YT5] [setup] [0m[94mecho -n "pineapple mango." > "/tmp/quz/f'\\'20"[0m
+[33m[tester::#YT5] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ echo test\ \ \ \ \ \ script
+[33m[your-program] [0mtest      script
+[33m[tester::#YT5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo \'\"script world\"\'
+[33m[your-program] [0m'"script world"'
+[33m[tester::#YT5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo world\nexample
+[33m[your-program] [0mworldnexample
+[33m[tester::#YT5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat "/tmp/quz/f\n75" "/tmp/quz/f\65" "/tmp/quz/f'\'20"
+[33m[your-program] [0mblueberry mango.pear strawberry.pineapple mango.
+[33m[tester::#YT5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#YT5] [0m[92mTest passed.[0m
+
+[33m[tester::#TG6] [0m[94mRunning tests for Stage #TG6 (Quoting - Double quotes)[0m
+[33m[tester::#TG6] [setup] [0m[94mexport PATH=/tmp/mango/pineapple/banana:$PATH[0m
+[33m[tester::#TG6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "grape apple." > "/tmp/foo/f 77"[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "apple pear." > "/tmp/foo/f   88"[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "pear blueberry." > "/tmp/foo/f's23"[0m
+[33m[your-program] [0m$ echo "script test"
+[33m[your-program] [0mscript test
+[33m[tester::#TG6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo "test  hello"  "world""script"
+[33m[your-program] [0mtest  hello worldscript
+[33m[tester::#TG6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo "world"  "shell's"  "test"
+[33m[your-program] [0mworld shell's test
+[33m[tester::#TG6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat "/tmp/foo/f 77" "/tmp/foo/f   88" "/tmp/foo/f's23"
+[33m[your-program] [0mgrape apple.apple pear.pear blueberry.
+[33m[tester::#TG6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#TG6] [0m[92mTest passed.[0m
+
+[33m[tester::#NI6] [0m[94mRunning tests for Stage #NI6 (Quoting - Single quotes)[0m
+[33m[tester::#NI6] [setup] [0m[94mexport PATH=/tmp/pineapple/pineapple/grape:$PATH[0m
+[33m[tester::#NI6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "pineapple blueberry." > "/tmp/bar/f   67"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "orange strawberry." > "/tmp/bar/f   4"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "banana strawberry." > "/tmp/bar/f   79"[0m
+[33m[your-program] [0m$ echo 'script shell'
+[33m[your-program] [0mscript shell
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo shell     test
+[33m[your-program] [0mshell test
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'hello     example' 'test''script'
+[33m[your-program] [0mhello     example testscript
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat '/tmp/bar/f   67' '/tmp/bar/f   4' '/tmp/bar/f   79'
+[33m[your-program] [0mpineapple blueberry.orange strawberry.banana strawberry.
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#NI6] [0m[92mTest passed.[0m
+
+[33m[tester::#GP4] [0m[94mRunning tests for Stage #GP4 (Navigation - The cd builtin: Home directory)[0m
+[33m[tester::#GP4] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/strawberry/grape/orange
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/strawberry/grape/orange
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ~
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/pear/banana/pineapple
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GP4] [0m[92mTest passed.[0m
+
+[33m[tester::#GQ9] [0m[94mRunning tests for Stage #GQ9 (Navigation - The cd builtin: Relative paths)[0m
+[33m[tester::#GQ9] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/strawberry
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/strawberry
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ./pear/strawberry
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/strawberry/pear/strawberry
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ../../../
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GQ9] [0m[92mTest passed.[0m
+
+[33m[tester::#RA6] [0m[94mRunning tests for Stage #RA6 (Navigation - The cd builtin: Absolute paths)[0m
+[33m[tester::#RA6] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/mango/orange/raspberry
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/mango/orange/raspberry
+[33m[tester::#RA6] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd /non-existing-directory
+[33m[your-program] [0mcd: /non-existing-directory: No such file or directory
+[33m[tester::#RA6] [0m[92m✓ Received error message[0m
+[33m[your-program] [0m$ 
+[33m[tester::#RA6] [0m[92mTest passed.[0m
+
+[33m[tester::#EI0] [0m[94mRunning tests for Stage #EI0 (Navigation - The pwd builtin)[0m
+[33m[tester::#EI0] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ type pwd
+[33m[your-program] [0mpwd is a shell builtin
+[33m[tester::#EI0] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/app
+[33m[tester::#EI0] [0m[92m✓ Received current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#EI0] [0m[92mTest passed.[0m
+
+[33m[tester::#IP1] [0m[94mRunning tests for Stage #IP1 (Run a program)[0m
+[33m[tester::#IP1] [setup] [0m[94mexport PATH=/tmp/bar:$PATH[0m
+[33m[tester::#IP1] [setup] [0m[94mAvailable executables:[0m
+[33m[tester::#IP1] [setup] [0m[94m- custom_exe_4155[0m
+[33m[tester::#IP1] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ custom_exe_4155 Maria
+[33m[your-program] [0mProgram was passed 2 args (including program name).
+[33m[your-program] [0mArg #0 (program name): custom_exe_4155
+[33m[your-program] [0mArg #1: Maria
+[33m[your-program] [0mProgram Signature: 2089315563
+[33m[tester::#IP1] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#IP1] [0m[92mTest passed.[0m
+
+[33m[tester::#MG5] [0m[94mRunning tests for Stage #MG5 (The type builtin: executable files)[0m
+[33m[tester::#MG5] [setup] [0m[94mexport PATH=/tmp/qux:$PATH[0m
+[33m[tester::#MG5] [setup] [0m[94mexport PATH=/tmp/bar:$PATH[0m
+[33m[tester::#MG5] [setup] [0m[94mAvailable executables:[0m
+[33m[tester::#MG5] [setup] [0m[94m- my_exe[0m
+[33m[tester::#MG5] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ type cat
+[33m[your-program] [0mcat is /bin/cat
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type cp
+[33m[your-program] [0mcp is /bin/cp
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type mkdir
+[33m[your-program] [0mmkdir is /bin/mkdir
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type my_exe
+[33m[your-program] [0mmy_exe is /tmp/bar/my_exe
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_raspberry_command
+[33m[your-program] [0minvalid_raspberry_command: not found
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_mango_command
+[33m[your-program] [0minvalid_mango_command: not found
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#MG5] [0m[92mTest passed.[0m
+
+[33m[tester::#EZ5] [0m[94mRunning tests for Stage #EZ5 (The type builtin: builtins)[0m
+[33m[tester::#EZ5] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ type echo
+[33m[your-program] [0mecho is a shell builtin
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type exit
+[33m[your-program] [0mexit is a shell builtin
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type type
+[33m[your-program] [0mtype is a shell builtin
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_mango_command
+[33m[your-program] [0minvalid_mango_command: not found
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_orange_command
+[33m[your-program] [0minvalid_orange_command: not found
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#EZ5] [0m[92mTest passed.[0m
+
+[33m[tester::#IZ3] [0m[94mRunning tests for Stage #IZ3 (The echo builtin)[0m
+[33m[tester::#IZ3] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ echo mango raspberry
+[33m[your-program] [0mmango raspberry
+[33m[tester::#IZ3] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo blueberry strawberry
+[33m[your-program] [0mblueberry strawberry
+[33m[tester::#IZ3] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#IZ3] [0m[92mTest passed.[0m
+
+[33m[tester::#PN5] [0m[94mRunning tests for Stage #PN5 (The exit builtin)[0m
+[33m[tester::#PN5] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ invalid_banana_command
+[33m[your-program] [0minvalid_banana_command: command not found
+[33m[tester::#PN5] [0m[92m�

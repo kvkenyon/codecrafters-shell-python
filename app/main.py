@@ -52,7 +52,7 @@ def parser(cmd: str):
     import re
 
     identifier = r"[\w/~\.-]+"
-    string = r"'[/\w\s~\.-\\]+'"
+    string = r"'[/\w\s~\.-\\\"]+'"
     dquote = r'"[/\w\s~\.\'-\\]+"'
     dash_arg = r"-[A-Za-z0-9]+"
     dash_dash_arg = r"--[A-Za-z0-9]+"
