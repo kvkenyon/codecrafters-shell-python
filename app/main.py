@@ -4,9 +4,8 @@ import subprocess
 
 SHELL_BUILTIN = lambda x: f"{x} is a shell builtin"  # noqa
 
-BUILTINS = set(["echo", "exit", "type"])
+BUILTINS = set(["echo", "exit", "type", "pwd"])
 
-CMDS = set(["echo", "type", "exit"])
 
 PATH = os.environ["PATH"]
 PATHS = PATH.split(":")
@@ -18,6 +17,18 @@ def find_exec_in_path(cmd: str):
         if os.path.exists(subcmd):
             return subcmd
     return None
+
+
+def pwd():
+    print(os.getcwd())
+
+
+def echo(*args):
+    print(f"{" ".join(args)}")
+
+
+def exit():
+    sys.exit(0)
 
 
 def main():
@@ -32,6 +43,8 @@ def main():
             sys.exit(0)
         elif cmd_name == "echo":
             print(" ".join(args))
+        elif cmd_name == "pwd":
+            pwd()
         elif cmd_name == "type":
             if args[0] in BUILTINS:
                 print(SHELL_BUILTIN(args[0]))
