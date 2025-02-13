@@ -32,6 +32,8 @@ def exit():
 
 
 def cd(path: str) -> None:
+    if path == "~":
+        path = os.path.expanduser(path)
     if os.path.exists(path):
         os.chdir(path)
         return
