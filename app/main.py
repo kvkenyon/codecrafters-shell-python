@@ -25,19 +25,19 @@ def main():
             print(" ".join(args))
         elif cmd_name == "type":
             found = False
+            if args[0] in BUILTINS:
+                print(SHELL_BUILTIN(args[0]))
+                continue
+
             for path in paths:
                 subcmd = path + "/" + args[0]
                 if os.path.exists(subcmd):
                     print(f"{args[0]} is {subcmd}")
                     found = True
                     break
-            if found:
-                continue
 
-            if args[0] not in BUILTINS:
+            if not found:
                 print(f"{args[0]}: not found")
-                continue
-            print(SHELL_BUILTIN(args[0]))
 
         else:
             print(f"{cmd_raw}: command not found")
