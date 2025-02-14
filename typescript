@@ -3396,4 +3396,1267 @@ Debug = true
 [33m[tester::#PN5] [0m[94mRunning ./your_program.sh[0m
 [33m[your-program] [0m$ invalid_banana_command
 [33m[your-program] [0minvalid_banana_command: command not found
-[33m[tester::#PN5] [0m[92m�
+[33m[tester::#PN5] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ exit 0
+[33m[tester::#PN5] [0m[92m✓ Program exited successfully[0m
+[33m[tester::#PN5] [0m[92m✓ No output after exit command[0m
+[33m[tester::#PN5] [0m[92mTest passed.[0m
+
+[33m[tester::#FF0] [0m[94mRunning tests for Stage #FF0 (REPL)[0m
+[33m[tester::#FF0] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ invalid_command_1
+[33m[your-program] [0minvalid_command_1: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ invalid_command_2
+[33m[your-program] [0minvalid_command_2: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ invalid_command_3
+[33m[your-program] [0minvalid_command_3: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ invalid_command_4
+[33m[your-program] [0minvalid_command_4: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ invalid_command_5
+[33m[your-program] [0minvalid_command_5: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ 
+[33m[tester::#FF0] [0m[92mTest passed.[0m
+
+[33m[tester::#CZ2] [0m[94mRunning tests for Stage #CZ2 (Handle invalid commands)[0m
+[33m[tester::#CZ2] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ invalid_pineapple_command
+[33m[your-program] [0minvalid_pineapple_command: command not found
+[33m[tester::#CZ2] [0m[92m✓ Received command not found message[0m
+[33m[tester::#CZ2] [0m[92mTest passed.[0m
+
+[33m[tester::#OO8] [0m[94mRunning tests for Stage #OO8 (Print a prompt)[0m
+[33m[tester::#OO8] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ 
+[33m[tester::#OO8] [0m[92m✓ Received prompt[0m
+[33m[tester::#OO8] [0m[92mTest passed.[0m
+
+Test passed. Congrats!
+
+[32mSubmit your changes to move to the next step:[0m
+[32m[0m
+[32m$ codecrafters submit[0m
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m)[00m [K[?1h=[?2004h[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [Kcodecrafters test    submit[?1l>[?2004l
+]2;codecrafters submit]1;codecraftersSubmitting changes (commit: 07d8e6e)...
+
+[33m⏳ Turbo test runners busy. You are in queue.[0m
+[33m[0m
+[33mUpgrade to skip the wait: https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#LE5] [0m[94mRunning tests for Stage #LE5 (Quoting - Backslash within single quotes)[0m
+[33m[tester::#LE5] [setup] [0m[94mexport PATH=/tmp/strawberry/blueberry/banana:$PATH[0m
+[33m[tester::#LE5] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#LE5] [setup] [0m[94mecho -n "raspberry grape." > "/tmp/baz/'f 33'"[0m
+[33m[tester::#LE5] [setup] [0m[94mecho -n "raspberry apple." > "/tmp/baz/'f  \\78'"[0m
+[33m[tester::#LE5] [setup] [0m[94mecho -n "apple pear." > "/tmp/baz/'f \\17\\'"[0m
+[33m[your-program] [0m$ echo 'hello\\nshell'
+[33m[your-program] [0mhello\\nshell
+[33m[tester::#LE5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'script\"testworld\"hello'
+[33m[your-program] [0mscript\"testworld\"hello
+[33m[tester::#LE5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'world\\nshell'
+[33m[your-program] [0mworld\\nshell
+[33m[tester::#LE5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat "/tmp/baz/'f 33'" "/tmp/baz/'f  \78'" "/tmp/baz/'f \17\'"
+[33m[your-program] [0mraspberry grape.raspberry apple.apple pear.
+[33m[tester::#LE5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#LE5] [0m[92mTest passed.[0m
+
+[33m[tester::#YT5] [0m[94mRunning tests for Stage #YT5 (Quoting - Backslash outside quotes)[0m
+[33m[tester::#YT5] [setup] [0m[94mexport PATH=/tmp/strawberry/strawberry/banana:$PATH[0m
+[33m[tester::#YT5] [setup] [0m[94mecho -n "strawberry pear." > "/tmp/bar/f\\n98"[0m
+[33m[tester::#YT5] [setup] [0m[94mecho -n "mango pineapple." > "/tmp/bar/f\\44"[0m
+[33m[tester::#YT5] [setup] [0m[94mecho -n "grape pineapple." > "/tmp/bar/f'\\'82"[0m
+[33m[tester::#YT5] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ echo hello\ \ \ \ \ \ shell
+[33m[your-program] [0mhello      shell
+[33m[tester::#YT5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo \'\"shell example\"\'
+[33m[your-program] [0m'"shell example"'
+[33m[tester::#YT5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo example\nworld
+[33m[your-program] [0mexamplenworld
+[33m[tester::#YT5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat "/tmp/bar/f\n98" "/tmp/bar/f\44" "/tmp/bar/f'\'82"
+[33m[your-program] [0mstrawberry pear.mango pineapple.grape pineapple.
+[33m[tester::#YT5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#YT5] [0m[92mTest passed.[0m
+
+[33m[tester::#TG6] [0m[94mRunning tests for Stage #TG6 (Quoting - Double quotes)[0m
+[33m[tester::#TG6] [setup] [0m[94mexport PATH=/tmp/grape/strawberry/apple:$PATH[0m
+[33m[tester::#TG6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "orange banana." > "/tmp/bar/f 33"[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "pineapple pear." > "/tmp/bar/f   39"[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "raspberry blueberry." > "/tmp/bar/f's15"[0m
+[33m[your-program] [0m$ echo "script shell"
+[33m[your-program] [0mscript shell
+[33m[tester::#TG6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo "shell  world"  "hello""script"
+[33m[your-program] [0mshell  world helloscript
+[33m[tester::#TG6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo "hello"  "test's"  "shell"
+[33m[your-program] [0mhello test's shell
+[33m[tester::#TG6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat "/tmp/bar/f 33" "/tmp/bar/f   39" "/tmp/bar/f's15"
+[33m[your-program] [0morange banana.pineapple pear.raspberry blueberry.
+[33m[tester::#TG6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#TG6] [0m[92mTest passed.[0m
+
+[33m[tester::#NI6] [0m[94mRunning tests for Stage #NI6 (Quoting - Single quotes)[0m
+[33m[tester::#NI6] [setup] [0m[94mexport PATH=/tmp/pineapple/apple/orange:$PATH[0m
+[33m[tester::#NI6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "mango raspberry." > "/tmp/quz/f   49"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "raspberry blueberry." > "/tmp/quz/f   23"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "pear orange." > "/tmp/quz/f   78"[0m
+[33m[your-program] [0m$ echo 'hello test'
+[33m[your-program] [0mhello test
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo test     script
+[33m[your-program] [0mtest script
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'world     shell' 'script''hello'
+[33m[your-program] [0mworld     shell scripthello
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat '/tmp/quz/f   49' '/tmp/quz/f   23' '/tmp/quz/f   78'
+[33m[your-program] [0mmango raspberry.raspberry blueberry.pear orange.
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#NI6] [0m[92mTest passed.[0m
+
+[33m[tester::#GP4] [0m[94mRunning tests for Stage #GP4 (Navigation - The cd builtin: Home directory)[0m
+[33m[tester::#GP4] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/apple/grape/blueberry
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/apple/grape/blueberry
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ~
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/pineapple/apple/pineapple
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GP4] [0m[92mTest passed.[0m
+
+[33m[tester::#GQ9] [0m[94mRunning tests for Stage #GQ9 (Navigation - The cd builtin: Relative paths)[0m
+[33m[tester::#GQ9] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/strawberry
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/strawberry
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ./pear/raspberry
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/strawberry/pear/raspberry
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ../../../
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GQ9] [0m[92mTest passed.[0m
+
+[33m[tester::#RA6] [0m[94mRunning tests for Stage #RA6 (Navigation - The cd builtin: Absolute paths)[0m
+[33m[tester::#RA6] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/pineapple/pear/blueberry
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/pineapple/pear/blueberry
+[33m[tester::#RA6] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd /non-existing-directory
+[33m[your-program] [0mcd: /non-existing-directory: No such file or directory
+[33m[tester::#RA6] [0m[92m✓ Received error message[0m
+[33m[your-program] [0m$ 
+[33m[tester::#RA6] [0m[92mTest passed.[0m
+
+[33m[tester::#EI0] [0m[94mRunning tests for Stage #EI0 (Navigation - The pwd builtin)[0m
+[33m[tester::#EI0] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ type pwd
+[33m[your-program] [0mpwd is a shell builtin
+[33m[tester::#EI0] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/app
+[33m[tester::#EI0] [0m[92m✓ Received current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#EI0] [0m[92mTest passed.[0m
+
+[33m[tester::#IP1] [0m[94mRunning tests for Stage #IP1 (Run a program)[0m
+[33m[tester::#IP1] [setup] [0m[94mexport PATH=/tmp/foo:$PATH[0m
+[33m[tester::#IP1] [setup] [0m[94mAvailable executables:[0m
+[33m[tester::#IP1] [setup] [0m[94m- custom_exe_9538[0m
+[33m[tester::#IP1] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ custom_exe_9538 David
+[33m[your-program] [0mProgram was passed 2 args (including program name).
+[33m[your-program] [0mArg #0 (program name): custom_exe_9538
+[33m[your-program] [0mArg #1: David
+[33m[your-program] [0mProgram Signature: 2677203790
+[33m[tester::#IP1] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#IP1] [0m[92mTest passed.[0m
+
+[33m[tester::#MG5] [0m[94mRunning tests for Stage #MG5 (The type builtin: executable files)[0m
+[33m[tester::#MG5] [setup] [0m[94mexport PATH=/tmp/quz:$PATH[0m
+[33m[tester::#MG5] [setup] [0m[94mexport PATH=/tmp/quz:$PATH[0m
+[33m[tester::#MG5] [setup] [0m[94mAvailable executables:[0m
+[33m[tester::#MG5] [setup] [0m[94m- my_exe[0m
+[33m[tester::#MG5] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ type cat
+[33m[your-program] [0mcat is /bin/cat
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type cp
+[33m[your-program] [0mcp is /bin/cp
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type mkdir
+[33m[your-program] [0mmkdir is /bin/mkdir
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type my_exe
+[33m[your-program] [0mmy_exe is /tmp/quz/my_exe
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_pineapple_command
+[33m[your-program] [0minvalid_pineapple_command: not found
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_apple_command
+[33m[your-program] [0minvalid_apple_command: not found
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#MG5] [0m[92mTest passed.[0m
+
+[33m[tester::#EZ5] [0m[94mRunning tests for Stage #EZ5 (The type builtin: builtins)[0m
+[33m[tester::#EZ5] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ type echo
+[33m[your-program] [0mecho is a shell builtin
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type exit
+[33m[your-program] [0mexit is a shell builtin
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type type
+[33m[your-program] [0mtype is a shell builtin
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_mango_command
+[33m[your-program] [0minvalid_mango_command: not found
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_blueberry_command
+[33m[your-program] [0minvalid_blueberry_command: not found
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#EZ5] [0m[92mTest passed.[0m
+
+[33m[tester::#IZ3] [0m[94mRunning tests for Stage #IZ3 (The echo builtin)[0m
+[33m[tester::#IZ3] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ echo apple orange
+[33m[your-program] [0mapple orange
+[33m[tester::#IZ3] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo banana raspberry pineapple
+[33m[your-program] [0mbanana raspberry pineapple
+[33m[tester::#IZ3] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo pineapple raspberry orange
+[33m[your-program] [0mpineapple raspberry orange
+[33m[tester::#IZ3] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#IZ3] [0m[92mTest passed.[0m
+
+[33m[tester::#PN5] [0m[94mRunning tests for Stage #PN5 (The exit builtin)[0m
+[33m[tester::#PN5] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ invalid_pear_command
+[33m[your-program] [0minvalid_pear_command: command not found
+[33m[tester::#PN5] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ exit 0
+[33m[tester::#PN5] [0m[92m✓ Program exited successfully[0m
+[33m[tester::#PN5] [0m[92m✓ No output after exit command[0m
+[33m[tester::#PN5] [0m[92mTest passed.[0m
+
+[33m[tester::#FF0] [0m[94mRunning tests for Stage #FF0 (REPL)[0m
+[33m[tester::#FF0] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ invalid_command_1
+[33m[your-program] [0minvalid_command_1: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ invalid_command_2
+[33m[your-program] [0minvalid_command_2: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ invalid_command_3
+[33m[your-program] [0minvalid_command_3: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ invalid_command_4
+[33m[your-program] [0minvalid_command_4: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ invalid_command_5
+[33m[your-program] [0minvalid_command_5: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ 
+[33m[tester::#FF0] [0m[92mTest passed.[0m
+
+[33m[tester::#CZ2] [0m[94mRunning tests for Stage #CZ2 (Handle invalid commands)[0m
+[33m[tester::#CZ2] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ invalid_orange_command
+[33m[your-program] [0minvalid_orange_command: command not found
+[33m[tester::#CZ2] [0m[92m✓ Received command not found message[0m
+[33m[tester::#CZ2] [0m[92mTest passed.[0m
+
+[33m[tester::#OO8] [0m[94mRunning tests for Stage #OO8 (Print a prompt)[0m
+[33m[tester::#OO8] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ 
+[33m[tester::#OO8] [0m[92m✓ Received prompt[0m
+[33m[tester::#OO8] [0m[92mTest passed.[0m
+
+Test passed. Congrats!
+
+[32mMove to the next step: https://app.codecrafters.io/courses/shell[0m
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcodecrafters submittest  [?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[32m⚡ This is a turbo test run. https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#GU3] [0m[94mRunning tests for Stage #GU3 (Quoting - Backslash within double quotes)[0m
+[33m[tester::#GU3] [setup] [0m[94mexport PATH=/tmp/pineapple/mango/strawberry:$PATH[0m
+[33m[tester::#GU3] [setup] [0m[94mecho -n "blueberry raspberry." > "/tmp/foo/\"f 20\""[0m
+[33m[tester::#GU3] [setup] [0m[94mecho -n "orange raspberry." > "/tmp/foo/\"f\\34\""[0m
+[33m[tester::#GU3] [setup] [0m[94mecho -n "mango blueberry." > "/tmp/foo/f2"[0m
+[33m[tester::#GU3] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ echo "shell'test'\\'script"
+[33m[your-program] [0mshell'test'\\'script
+[33m[tester::#GU3] [0m[91mOutput does not match expected value.[0m
+[33m[tester::#GU3] [0m[91m[32mExpected:[0m "shell'test'\'script"[0m
+[33m[tester::#GU3] [0m[91m[31mReceived:[0m "shell'test'\\'script"[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GU3] [0m[91mAssertion failed.[0m
+[33m[tester::#GU3] [0m[91mTest failed[0m
+
+View our article on debugging test failures: https://codecrafters.io/debug
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hD cclear[?1l>[?2004l
+]2;clear]1;clear[3J[H[2J[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hclearcodecrafters test[17Dclear            [12Dcodecrafters testsubmittest  submittest  [17D./your_program.sh[17Dclear            [12D./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "shell'test'\\'script"
+shell'test'\\'script
+$ ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m126[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m97[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ ^[[A^[[A        echo "shell'test'\\'script"
+Command(name='echo', args=["shell'test'\\\\'script"], parsed=['echo', ' ', "shell'test'\\\\'script"])
+shell'test'\\'script
+$ ^[[A^[[A^[[B            ^[[A^[[A        ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m126[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m97[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcclear[?1l>[?2004l
+]2;clear]1;clear[3J[H[2J[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hclear./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo    ?P<day>       echo "  \\"' }"  "
+Command(name='echo', args=['\\\\'], parsed=['echo', ' ', '\\\\'])
+\\
+$ ^[[A    ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m126[0m, in [35m<module>[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m97[0m, in [35mmain[0m
+    while True:
+    
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo } "\"
+Command(name='echo', args=['\\'], parsed=['echo', ' ', '\\'])
+\
+$ ^[[A^[[B        echo "\""
+Command(name='echo', args=['\\'], parsed=['echo', ' ', '\\'])
+\
+$ ^[[A    ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m128[0m, in [35m<module>[0m
+    if _[1;31m_name_[0m_ == "__main__":
+        [1;31m^^^^^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m99[0m, in [35mmain[0m
+    sys.stdout[1;31m.write([0m"$ ")
+              [1;31m^^^^^^^[0m
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcclear[?1l>[?2004l
+]2;clear]1;clear[3J[H[2J[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hclear./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "hello\"insidequotes"script\"
+Command(name='echo', args=['hello\\', 'insidequotes', 'script\\'], parsed=['echo', ' ', 'hello\\', 'insidequotes', 'script\\'])
+hello\insidequotesscript\
+$ ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m129[0m, in [35m<module>[0m
+    if _[1;31m_name_[0m_ == "__main__":
+        [1;31m^^^^^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m100[0m, in [35mmain[0m
+    sys.stdout[1;31m.write([0m"$ ")
+              [1;31m^^^^^^^[0m
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "hello\"insidequotes"script\"
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"hello\\"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"script\\"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+Command(name='echo', args=['hello\\', 'insidequotes', 'script\\'], parsed=['echo', ' ', 'hello\\', 'insidequotes', 'script\\'])
+hello\insidequotesscript\
+$ ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m130[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m101[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "hello\"insidequotes"script\"
+{'CMD': 'echo', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"hello\\"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': 'insidequotes', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"script\\"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+Command(name='echo', args=['hello\\', 'insidequotes', 'script\\'], parsed=['echo', ' ', 'hello\\', 'insidequotes', 'script\\'])
+hello\insidequotesscript\
+$ ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m130[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m101[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "hello\"insidequotes"script\"
+(?P<CMD>[\w/~\.-]+)|(?P<SQUOTE>'[/\w\s~\.-\\\"]+')|(?P<DQUOTE>"[/\w\s~\.\'-(?P<DQESCAPE>\\.)]+")|(?P<DASHARG>-[A-Za-z0-9]+)|(?P<ESCAPE>\\.)|(?P<DDARG>--[A-Za-z0-9]+)|(?P<SPACE>[ \t]+)
+{'CMD': 'echo', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"hello\\"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': 'insidequotes', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"script\\"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+Command(name='echo', args=['hello\\', 'insidequotes', 'script\\'], parsed=['echo', ' ', 'hello\\', 'insidequotes', 'script\\'])
+hello\insidequotesscript\
+$ ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m130[0m, in [35m<module>[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m101[0m, in [35mmain[0m
+    cmd_name, [1;31margs, p[0marsed = cmd.name, cmd.args, cmd.parsed
+              [1;31m^^^^^^^[0m
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ ^[[A\                 processed = re.sub(r'\\(.)', r'\1', content)  # Replace \x with x
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': '            '}
+{'CMD': 'processed', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': 're.sub', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': 'r', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': '\\\\', 'DDARG': None, 'SPACE': None}
+{'CMD': '.', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': 'r', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': "'\\1'", 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': 'content', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': '  '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': 'Replace', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': '\\x', 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': 'with', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': 'x', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+            processed = re.sub(r'\\(.)', r'\1', content)  # Replace \x with x: command not found
+$ 
+Traceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m125[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m119[0m, in [35mmain[0m
+    [31msubprocess.run[0m[1;31m([cmd_name, *args])[0m
+    [31m~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py"[0m, line [35m556[0m, in [35mrun[0m
+    with [31mPopen[0m[1;31m(*popenargs, **kwargs)[0m as process:
+         [31m~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py"[0m, line [35m1038[0m, in [35m__init__[0m
+    [31mself._execute_child[0m[1;31m(args, executable, preexec_fn, close_fds,[0m
+    [31m~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+                        [1;31mpass_fds, cwd, env,[0m
+                        [1;31m^^^^^^^^^^^^^^^^^^^[0m
+    ...<5 lines>...
+                        [1;31mgid, gids, uid, umask,[0m
+                        [1;31m^^^^^^^^^^^^^^^^^^^^^^[0m
+                        [1;31mstart_new_session, process_group)[0m
+                        [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py"[0m, line [35m1974[0m, in [35m_execute_child[0m
+    raise child_exception_type(errno_num, err_msg, err_filename)
+[1;35mPermissionError[0m: [35m[Errno 13] Permission denied: ''[0m
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ ^[[1;2D            processed = re.sub(r'\\(.)', r'\1', content)  # Replace \x with x
+{'CMD': '1', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': '2D', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': '            '}
+{'CMD': 'processed', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': 're.sub', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': 'r', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': '\\\\', 'DDARG': None, 'SPACE': None}
+{'CMD': '.', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': 'r', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': "'\\1'", 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': 'content', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': '  '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': 'Replace', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': '\\x', 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': 'with', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': 'x', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+[1;2D            processed = re.sub(r'\\(.)', r'\1', content)  # Replace \x with x: command not found
+$ ^[[A    ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m125[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m97[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcclear[?1l>[?2004l
+]2;clear]1;clear[3J[H[2J[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hclear./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "testing \x "
+{'CMD': 'echo', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"testing \\x "', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+testing \x
+$ ^[[A    echo "testing \""
+{'CMD': 'echo', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"testing \\"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+testing \
+$ ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m125[0m, in [35m<module>[0m
+    subprocess.run([cmd_name, *args])
+    
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m97[0m, in [35mmain[0m
+    return Command[1;31m(name, [0margs, parsed)
+                  [1;31m^^^^^^^[0m
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcclear[?1l>[?2004l
+]2;clear]1;clear[3J[H[2J[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hclear./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "testin  g \x"
+{'CMD': 'echo', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"testing \\x"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+Traceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m131[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m104[0m, in [35mmain[0m
+    cmd = parser(cmd_raw)
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m83[0m, in [35mparser[0m
+    processed = re.sub(r"\\[\"\$]", r"\1", content)  # Replace \x with x
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/re/__init__.py"[0m, line [35m208[0m, in [35msub[0m
+    return [31m_compile(pattern, flags).sub[0m[1;31m(repl, string, count)[0m
+           [31m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/re/__init__.py"[0m, line [35m377[0m, in [35m_compile_template[0m
+    return _sre.template(pattern, [31m_parser.parse_template[0m[1;31m(repl, pattern)[0m)
+                                  [31m~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^[0m
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/re/_parser.py"[0m, line [35m1070[0m, in [35mparse_template[0m
+    [31maddgroup[0m[1;31m(int(this[1:]), len(this) - 1)[0m
+    [31m~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/re/_parser.py"[0m, line [35m1015[0m, in [35maddgroup[0m
+    raise s.error("invalid group reference %d" % index, pos)
+[1;35mre.PatternError[0m: [35minvalid group reference 1 at position 1[0m
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "\""
+{'CMD': 'echo', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"\\"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+Traceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m131[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m104[0m, in [35mmain[0m
+    cmd = parser(cmd_raw)
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m83[0m, in [35mparser[0m
+    processed = re.sub(r'\\["$]', r"\1", content)  # Replace \x with x
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/re/__init__.py"[0m, line [35m208[0m, in [35msub[0m
+    return [31m_compile(pattern, flags).sub[0m[1;31m(repl, string, count)[0m
+           [31m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/re/__init__.py"[0m, line [35m377[0m, in [35m_compile_template[0m
+    return _sre.template(pattern, [31m_parser.parse_template[0m[1;31m(repl, pattern)[0m)
+                                  [31m~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^[0m
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/re/_parser.py"[0m, line [35m1070[0m, in [35mparse_template[0m
+    [31maddgroup[0m[1;31m(int(this[1:]), len(this) - 1)[0m
+    [31m~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/re/_parser.py"[0m, line [35m1015[0m, in [35maddgroup[0m
+    raise s.error("invalid group reference %d" % index, pos)
+[1;35mre.PatternError[0m: [35minvalid group reference 1 at position 1[0m
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004heecho "\x"[?1l>[?2004l
+]2;echo "\x"]1;echo 
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hecho "\x"[9D./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "yall \x"
+{'CMD': 'echo', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"yall \\x"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+yall \x
+$ echo "yalla \" \x"
+{'CMD': 'echo', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"yalla \\"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': '\\x', 'DDARG': None, 'SPACE': None}
+yalla \ x
+$ ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m131[0m, in [35m<module>[0m
+    if _[1;31m_name_[0m_ == "__main__":
+        [1;31m^^^^^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m103[0m, in [35mmain[0m
+    sys.stdout[1;31m.write([0m"$ ")
+              [1;31m^^^^^^^[0m
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "\""
+{'CMD': 'echo', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"\\"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+\
+$ ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m132[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m104[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "\x"
+{'CMD': 'echo', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"\\x"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+\x
+\x
+$ ^[[A    echo "\x " asdfasdf "
+{'CMD': 'echo', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"\\"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+\
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': 'asdfasdf', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+\ asdfasdf
+$ ech   ^[[A^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m132[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m104[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "\""
+{'CMD': 'echo', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"\\"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+\
+\
+$ 	^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m132[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m104[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "\""
+Traceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m132[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m105[0m, in [35mmain[0m
+    cmd = parser(cmd_raw)
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m74[0m, in [35mparser[0m
+    for mo in [31mre.finditer[0m[1;31m(parser, cmd)[0m:
+              [31m~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^[0m
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/re/__init__.py"[0m, line [35m285[0m, in [35mfinditer[0m
+    return [31m_compile[0m[1;31m(pattern, flags)[0m.finditer(string)
+           [31m~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^[0m
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/re/__init__.py"[0m, line [35m350[0m, in [35m_compile[0m
+    p = _compiler.compile(pattern, flags)
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/re/_compiler.py"[0m, line [35m748[0m, in [35mcompile[0m
+    p = _parser.parse(p, flags)
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/re/_parser.py"[0m, line [35m985[0m, in [35mparse[0m
+    raise source.error("unbalanced parenthesis")
+[1;35mre.PatternError[0m: [35munbalanced parenthesis at position 87[0m
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "\""
+{'CMD': 'echo', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"\\"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+\
+\
+$ ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m132[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m104[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "aaasdf"
+{'CMD': 'echo', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"aaasdf"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+aaasdf
+aaasdf
+$ ^[[A    echo "'asdf'"
+{'CMD': 'echo', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"\'asdf\'"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+'asdf'
+'asdf'
+$ ^[[A    echo "\{ ""
+{'CMD': 'echo', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"\\""', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+FUK"
+FUK"
+$ ^[[A    echo "\x"
+{'CMD': 'echo', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"\\x"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+\x
+\x
+$ ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m132[0m, in [35m<module>[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m104[0m, in [35mmain[0m
+    cmd = pars[1;31mer(cmd_[0mraw)
+              [1;31m^^^^^^^[0m
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "tesgin \     ting \x testing \""
+testing \x testing "
+$ exit
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hccodecrafters test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[33m⏳ Turbo test runners busy. You are in queue.[0m
+[33m[0m
+[33mUpgrade to skip the wait: https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#GU3] [0m[94mRunning tests for Stage #GU3 (Quoting - Backslash within double quotes)[0m
+[33m[tester::#GU3] [setup] [0m[94mexport PATH=/tmp/apple/mango/banana:$PATH[0m
+[33m[tester::#GU3] [setup] [0m[94mecho -n "banana grape." > "/tmp/baz/\"f 72\""[0m
+[33m[tester::#GU3] [setup] [0m[94mecho -n "grape blueberry." > "/tmp/baz/\"f\\61\""[0m
+[33m[tester::#GU3] [setup] [0m[94mecho -n "blueberry mango." > "/tmp/baz/f59"[0m
+[33m[tester::#GU3] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ echo "world'example'\\'script"
+[33m[your-program] [0mworld'example'\\'script
+[33m[tester::#GU3] [0m[91mOutput does not match expected value.[0m
+[33m[tester::#GU3] [0m[91m[32mExpected:[0m "world'example'\'script"[0m
+[33m[tester::#GU3] [0m[91m[31mReceived:[0m "world'example'\\'script"[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GU3] [0m[91mAssertion failed.[0m
+[33m[tester::#GU3] [0m[91mTest failed[0m
+
+View our article on debugging test failures: https://codecrafters.io/debug
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hcodecrafters test[17D./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ cho "world'example'\\'script"^[[D^[[D        ^A                               echo "world'example'\\'script"
+world'example'\\'script
+$ ^[[A^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m131[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m103[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ cho "world'example'\\'script"                             echo "world'example'\\'script"
+world'example'\\'script
+$ echo "world'example'\"'script"
+world'example'\script
+$ ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m131[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m103[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "world'example'\\'script"
+world'example'\\'script
+$ ^[[A^[[B        ^[[A    ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m131[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m103[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "     cho "world'example'\\'script"
+world'example'\\'script
+$ ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m131[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m103[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[17D                 [17D./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "world'example'\\'script"
+world'example'\\'script
+$ ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m131[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m103[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ ^[[A    echo "world'example'\\'script"
+world'example'\\'script
+$ ^[[A^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m131[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m103[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "world'example'\\'script"
+world'example'\\'script
+$ ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m131[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m103[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[17D                 [17D./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "world'example'\\'script"
+{'CMD': 'echo', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"world\'example\'\\\\\'script"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+world'example'\\'script
+$ ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m131[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m103[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[?1l>[?2004l
+]2;./your_program.sh]1;./your_program.sh$ echo "world'example'\\'script"
+{'CMD': 'echo', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"world\'example\'\\\\\'script"', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+world'example'\'script
+$ echo "world \"  "
+{'CMD': 'echo', 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': None, 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': ' '}
+{'CMD': None, 'SQUOTE': None, 'DQUOTE': '"world \\""', 'DASHARG': None, 'ESCAPE': None, 'DDARG': None, 'SPACE': None}
+world "
+$ ^CTraceback (most recent call last):
+  File [35m"<frozen runpy>"[0m, line [35m198[0m, in [35m_run_module_as_main[0m
+  File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m131[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/kevin/Documents/GitHub/codecrafters-shell-python/app/main.py"[0m, line [35m103[0m, in [35mmain[0m
+    cmd_raw = input()
+[1;35mKeyboardInterrupt[0m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;31m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h./your_program.sh[17Dcodecrafters test[?1l>[?2004l
+]2;codecrafters test]1;codecraftersInitiating test run...
+
+[33m⏳ Turbo test runners busy. You are in queue.[0m
+[33m[0m
+[33mUpgrade to skip the wait: https://codecrafters.io/turbo[0m
+
+Running tests. Logs should appear shortly...
+
+[33m[compile][0m Moved ./.codecrafters/run.sh → ./your_program.sh
+[33m[compile][0m [32mCompilation successful.[0m
+
+Debug = true
+
+[33m[tester::#GU3] [0m[94mRunning tests for Stage #GU3 (Quoting - Backslash within double quotes)[0m
+[33m[tester::#GU3] [setup] [0m[94mexport PATH=/tmp/raspberry/banana/banana:$PATH[0m
+[33m[tester::#GU3] [setup] [0m[94mecho -n "orange mango." > "/tmp/qux/\"f 56\""[0m
+[33m[tester::#GU3] [setup] [0m[94mecho -n "orange blueberry." > "/tmp/qux/\"f\\12\""[0m
+[33m[tester::#GU3] [setup] [0m[94mecho -n "banana raspberry." > "/tmp/qux/f18"[0m
+[33m[tester::#GU3] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ echo "test'world'\\'example"
+[33m[your-program] [0mtest'world'\'example
+[33m[tester::#GU3] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo "test\"insidequotes"world\"
+[33m[your-program] [0mtest"insidequotesworld"
+[33m[tester::#GU3] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo "mixed\"quote'script'\\"
+[33m[your-program] [0mmixed"quote'script'\
+[33m[tester::#GU3] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat '/tmp/qux/"f 56"' '/tmp/qux/"f\12"' '/tmp/qux/f18'
+[33m[your-program] [0morange mango.orange blueberry.banana raspberry.
+[33m[tester::#GU3] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GU3] [0m[92mTest passed.[0m
+
+[33m[tester::#LE5] [0m[94mRunning tests for Stage #LE5 (Quoting - Backslash within single quotes)[0m
+[33m[tester::#LE5] [setup] [0m[94mexport PATH=/tmp/banana/strawberry/pineapple:$PATH[0m
+[33m[tester::#LE5] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#LE5] [setup] [0m[94mecho -n "grape apple." > "/tmp/baz/'f 6'"[0m
+[33m[tester::#LE5] [setup] [0m[94mecho -n "pineapple grape." > "/tmp/baz/'f  \\14'"[0m
+[33m[tester::#LE5] [setup] [0m[94mecho -n "strawberry banana." > "/tmp/baz/'f \\86\\'"[0m
+[33m[your-program] [0m$ echo 'world\\nhello'
+[33m[your-program] [0mworld\\nhello
+[33m[tester::#LE5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'test\"scriptshell\"world'
+[33m[your-program] [0mtest\"scriptshell\"world
+[33m[tester::#LE5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'shell\\nhello'
+[33m[your-program] [0mshell\\nhello
+[33m[tester::#LE5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat "/tmp/baz/'f 6'" "/tmp/baz/'f  \14'" "/tmp/baz/'f \86\'"
+[33m[your-program] [0mgrape apple.pineapple grape.strawberry banana.
+[33m[tester::#LE5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#LE5] [0m[92mTest passed.[0m
+
+[33m[tester::#YT5] [0m[94mRunning tests for Stage #YT5 (Quoting - Backslash outside quotes)[0m
+[33m[tester::#YT5] [setup] [0m[94mexport PATH=/tmp/pineapple/mango/pear:$PATH[0m
+[33m[tester::#YT5] [setup] [0m[94mecho -n "mango strawberry." > "/tmp/foo/f\\n59"[0m
+[33m[tester::#YT5] [setup] [0m[94mecho -n "banana pear." > "/tmp/foo/f\\82"[0m
+[33m[tester::#YT5] [setup] [0m[94mecho -n "banana strawberry." > "/tmp/foo/f'\\'57"[0m
+[33m[tester::#YT5] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ echo world\ \ \ \ \ \ test
+[33m[your-program] [0mworld      test
+[33m[tester::#YT5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo \'\"test shell\"\'
+[33m[your-program] [0m'"test shell"'
+[33m[tester::#YT5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo shell\nscript
+[33m[your-program] [0mshellnscript
+[33m[tester::#YT5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat "/tmp/foo/f\n59" "/tmp/foo/f\82" "/tmp/foo/f'\'57"
+[33m[your-program] [0mmango strawberry.banana pear.banana strawberry.
+[33m[tester::#YT5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#YT5] [0m[92mTest passed.[0m
+
+[33m[tester::#TG6] [0m[94mRunning tests for Stage #TG6 (Quoting - Double quotes)[0m
+[33m[tester::#TG6] [setup] [0m[94mexport PATH=/tmp/orange/pear/pear:$PATH[0m
+[33m[tester::#TG6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "grape raspberry." > "/tmp/quz/f 24"[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "pineapple pear." > "/tmp/quz/f   17"[0m
+[33m[tester::#TG6] [setup] [0m[94mecho -n "banana pineapple." > "/tmp/quz/f's97"[0m
+[33m[your-program] [0m$ echo "hello shell"
+[33m[your-program] [0mhello shell
+[33m[tester::#TG6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo "shell  world"  "script""hello"
+[33m[your-program] [0mshell  world scripthello
+[33m[tester::#TG6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo "script"  "test's"  "shell"
+[33m[your-program] [0mscript test's shell
+[33m[tester::#TG6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat "/tmp/quz/f 24" "/tmp/quz/f   17" "/tmp/quz/f's97"
+[33m[your-program] [0mgrape raspberry.pineapple pear.banana pineapple.
+[33m[tester::#TG6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#TG6] [0m[92mTest passed.[0m
+
+[33m[tester::#NI6] [0m[94mRunning tests for Stage #NI6 (Quoting - Single quotes)[0m
+[33m[tester::#NI6] [setup] [0m[94mexport PATH=/tmp/grape/strawberry/raspberry:$PATH[0m
+[33m[tester::#NI6] [0m[94mRunning ./your_program.sh[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "blueberry banana." > "/tmp/quz/f   10"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "blueberry pineapple." > "/tmp/quz/f   27"[0m
+[33m[tester::#NI6] [setup] [0m[94mecho -n "strawberry raspberry." > "/tmp/quz/f   72"[0m
+[33m[your-program] [0m$ echo 'example shell'
+[33m[your-program] [0mexample shell
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo shell     script
+[33m[your-program] [0mshell script
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo 'hello     test' 'script''example'
+[33m[your-program] [0mhello     test scriptexample
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ cat '/tmp/quz/f   10' '/tmp/quz/f   27' '/tmp/quz/f   72'
+[33m[your-program] [0mblueberry banana.blueberry pineapple.strawberry raspberry.
+[33m[tester::#NI6] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#NI6] [0m[92mTest passed.[0m
+
+[33m[tester::#GP4] [0m[94mRunning tests for Stage #GP4 (Navigation - The cd builtin: Home directory)[0m
+[33m[tester::#GP4] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/apple/strawberry/grape
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/apple/strawberry/grape
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ~
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/apple/blueberry/strawberry
+[33m[tester::#GP4] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GP4] [0m[92mTest passed.[0m
+
+[33m[tester::#GQ9] [0m[94mRunning tests for Stage #GQ9 (Navigation - The cd builtin: Relative paths)[0m
+[33m[tester::#GQ9] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/orange
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/orange
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ./banana/mango
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/orange/banana/mango
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd ../../../
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp
+[33m[tester::#GQ9] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#GQ9] [0m[92mTest passed.[0m
+
+[33m[tester::#RA6] [0m[94mRunning tests for Stage #RA6 (Navigation - The cd builtin: Absolute paths)[0m
+[33m[tester::#RA6] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ cd /tmp/strawberry/raspberry/apple
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/tmp/strawberry/raspberry/apple
+[33m[tester::#RA6] [0m[92mReceived current working directory response[0m
+[33m[your-program] [0m$ cd /non-existing-directory
+[33m[your-program] [0mcd: /non-existing-directory: No such file or directory
+[33m[tester::#RA6] [0m[92m✓ Received error message[0m
+[33m[your-program] [0m$ 
+[33m[tester::#RA6] [0m[92mTest passed.[0m
+
+[33m[tester::#EI0] [0m[94mRunning tests for Stage #EI0 (Navigation - The pwd builtin)[0m
+[33m[tester::#EI0] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ type pwd
+[33m[your-program] [0mpwd is a shell builtin
+[33m[tester::#EI0] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ pwd
+[33m[your-program] [0m/app
+[33m[tester::#EI0] [0m[92m✓ Received current working directory response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#EI0] [0m[92mTest passed.[0m
+
+[33m[tester::#IP1] [0m[94mRunning tests for Stage #IP1 (Run a program)[0m
+[33m[tester::#IP1] [setup] [0m[94mexport PATH=/tmp/bar:$PATH[0m
+[33m[tester::#IP1] [setup] [0m[94mAvailable executables:[0m
+[33m[tester::#IP1] [setup] [0m[94m- custom_exe_5587[0m
+[33m[tester::#IP1] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ custom_exe_5587 David
+[33m[your-program] [0mProgram was passed 2 args (including program name).
+[33m[your-program] [0mArg #0 (program name): custom_exe_5587
+[33m[your-program] [0mArg #1: David
+[33m[your-program] [0mProgram Signature: 3211669652
+[33m[tester::#IP1] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#IP1] [0m[92mTest passed.[0m
+
+[33m[tester::#MG5] [0m[94mRunning tests for Stage #MG5 (The type builtin: executable files)[0m
+[33m[tester::#MG5] [setup] [0m[94mexport PATH=/tmp/foo:$PATH[0m
+[33m[tester::#MG5] [setup] [0m[94mexport PATH=/tmp/foo:$PATH[0m
+[33m[tester::#MG5] [setup] [0m[94mAvailable executables:[0m
+[33m[tester::#MG5] [setup] [0m[94m- my_exe[0m
+[33m[tester::#MG5] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ type cat
+[33m[your-program] [0mcat is /bin/cat
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type cp
+[33m[your-program] [0mcp is /bin/cp
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type mkdir
+[33m[your-program] [0mmkdir is /bin/mkdir
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type my_exe
+[33m[your-program] [0mmy_exe is /tmp/foo/my_exe
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_raspberry_command
+[33m[your-program] [0minvalid_raspberry_command: not found
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_strawberry_command
+[33m[your-program] [0minvalid_strawberry_command: not found
+[33m[tester::#MG5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#MG5] [0m[92mTest passed.[0m
+
+[33m[tester::#EZ5] [0m[94mRunning tests for Stage #EZ5 (The type builtin: builtins)[0m
+[33m[tester::#EZ5] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ type echo
+[33m[your-program] [0mecho is a shell builtin
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type exit
+[33m[your-program] [0mexit is a shell builtin
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type type
+[33m[your-program] [0mtype is a shell builtin
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_strawberry_command
+[33m[your-program] [0minvalid_strawberry_command: not found
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ type invalid_banana_command
+[33m[your-program] [0minvalid_banana_command: not found
+[33m[tester::#EZ5] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#EZ5] [0m[92mTest passed.[0m
+
+[33m[tester::#IZ3] [0m[94mRunning tests for Stage #IZ3 (The echo builtin)[0m
+[33m[tester::#IZ3] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ echo banana blueberry
+[33m[your-program] [0mbanana blueberry
+[33m[tester::#IZ3] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo pear banana strawberry
+[33m[your-program] [0mpear banana strawberry
+[33m[tester::#IZ3] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ echo banana apple
+[33m[your-program] [0mbanana apple
+[33m[tester::#IZ3] [0m[92m✓ Received expected response[0m
+[33m[your-program] [0m$ 
+[33m[tester::#IZ3] [0m[92mTest passed.[0m
+
+[33m[tester::#PN5] [0m[94mRunning tests for Stage #PN5 (The exit builtin)[0m
+[33m[tester::#PN5] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ invalid_banana_command
+[33m[your-program] [0minvalid_banana_command: command not found
+[33m[tester::#PN5] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ exit 0
+[33m[tester::#PN5] [0m[92m✓ Program exited successfully[0m
+[33m[tester::#PN5] [0m[92m✓ No output after exit command[0m
+[33m[tester::#PN5] [0m[92mTest passed.[0m
+
+[33m[tester::#FF0] [0m[94mRunning tests for Stage #FF0 (REPL)[0m
+[33m[tester::#FF0] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ invalid_command_1
+[33m[your-program] [0minvalid_command_1: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ invalid_command_2
+[33m[your-program] [0minvalid_command_2: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ invalid_command_3
+[33m[your-program] [0minvalid_command_3: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ invalid_command_4
+[33m[your-program] [0minvalid_command_4: command not found
+[33m[tester::#FF0] [0m[92m✓ Received command not found message[0m
+[33m[your-program] [0m$ 
+[33m[tester::#FF0] [0m[92mTest passed.[0m
+
+[33m[tester::#CZ2] [0m[94mRunning tests for Stage #CZ2 (Handle invalid commands)[0m
+[33m[tester::#CZ2] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ invalid_strawberry_command
+[33m[your-program] [0minvalid_strawberry_command: command not found
+[33m[tester::#CZ2] [0m[92m✓ Received command not found message[0m
+[33m[tester::#CZ2] [0m[92mTest passed.[0m
+
+[33m[tester::#OO8] [0m[94mRunning tests for Stage #OO8 (Print a prompt)[0m
+[33m[tester::#OO8] [0m[94mRunning ./your_program.sh[0m
+[33m[your-program] [0m$ 
+[33m[tester::#OO8] [0m[92m✓ Received prompt[0m
+[33m[tester::#OO8] [0m[92mTest passed.[0m
+
+Test passed. Congrats!
+
+[32mSubmit your changes to move to the next step:[0m
+[32m[0m
+[32m$ codecrafters submit[0m
+[1m[7m%[27m[1m[0m                                                                                                                                                                                ]2;kevin@Kevins-MBP:~/Documents/GitHub/codecrafters-shell-python]1;..-shell-python]7;file://Kevins-MBP.lan/Users/kevin/Documents/GitHub/codecrafters-shell-python\[0m[27m[24m[J[01;32m➜  [36mcodecrafters-shell-python[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h

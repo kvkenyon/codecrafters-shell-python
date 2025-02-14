@@ -53,7 +53,7 @@ def parser(cmd: str):
 
     identifier = r"[\w/~\.-]+"
     string = r"'[/\w\s~\.-\\\"]+'"
-    dquote = r'"[/\w\s~\.\'-\\]+"'
+    dquote = r'"([/\w\s~.\'-]+|(\\.)|(\\))+"'
     dash_arg = r"-[A-Za-z0-9]+"
     dash_dash_arg = r"--[A-Za-z0-9]+"
     space = r"[ \t]+"
@@ -68,17 +68,23 @@ def parser(cmd: str):
         ("SPACE", space),
     ]
     parser = "|".join("(?P<%s>%s)" % pair for pair in regex_spec)
-
     name = ""
     args = []
     parsed = []
     for mo in re.finditer(parser, cmd):
         kind = mo.lastgroup
         value = mo.group()
+        # print(mo.groupdict())
         if kind == "CMD" and not name:
             name = value
             parsed.append(name)
-        elif kind == "SQUOTE" or kind == "DQUOTE":
+        elif kind == "DQUOTE":
+            content = value[1:-1]
+            processed = re.sub(r'\\(["$\\])', r"\1", content)
+            args.append(processed)
+            parsed.append(processed)
+
+        elif kind == "SQUOTE":
             args.append(value[1:-1])
             parsed.append(value[1:-1])
         elif kind == "SPACE":
@@ -96,7 +102,6 @@ def main():
         sys.stdout.write("$ ")
         cmd_raw = input()
         cmd = parser(cmd_raw)
-        # print(cmd)
         if not cmd:
             return f"{cmd_raw}: command not found"
         cmd_name, args, parsed = cmd.name, cmd.args, cmd.parsed
